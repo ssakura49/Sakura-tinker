@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "sakuratinker:charm_chain",
+    "sakuratinker:charm_core",
+    "sakuratinker:swift_blade",
+    "sakuratinker:swift_guard",
+    "sakuratinker:barrel",
+    "sakuratinker:battery_cell",
+    "sakuratinker:laser_medium"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+    "loader": "tconstruct:material",
+    "parent": "forge:item/default",
+    "textures": {
+      "texture": "sakuratinker:item/tool/part/battery_cell/battery_cell"
+    }
+  }

@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:molding_table",
+  "material": {
+    "item": "tconstruct:blank_sand_cast"
+  },
+  "pattern": {
+    "type": "tconstruct:material",
+    "item": "sakuratinker:battery_cell"
+  },
+  "result": "sakuratinker:battery_cell_sand_cast"
+}

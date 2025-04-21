@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "sakuratinker:youkai_ingot"
+  },
+  "result": {
+    "fluid": "sakuratinker:molten_youkai",
+    "amount": 90
+  },
+  "temperature": 750,
+  "time": 100
+}

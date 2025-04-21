@@ -1,0 +1,26 @@
+{
+  "default": [
+    {
+      "level": 2,
+      "name": "sakuratinker:void"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "sakuratinker:celestial"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:rootedness"
+      }
+    ],
+    "sakuratinker:charm": [
+      {
+        "name": "sakuratinker:ether_protect",
+        "level": 1
+      }
+    ]
+  }
+}

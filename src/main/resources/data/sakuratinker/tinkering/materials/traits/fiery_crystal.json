@@ -1,0 +1,20 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "sakuratinker:twilight_sparkle"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:twilight_remembrance"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "sakuratinker:armor_twilight_remembrance"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "sakuratinker:soul_devourer"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "sakuratinker:shielding"
+      }
+    ],
+    "sakuratinker:charm": [
+      {
+        "name": "sakuratinker:world_bottom",
+        "level": 1
+      }
+    ]
+  }
+}

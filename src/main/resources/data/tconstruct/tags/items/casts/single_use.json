@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#sakuratinker:casts/single_use/charm_chain",
+    "#sakuratinker:casts/single_use/charm_core",
+    "#sakuratinker:casts/single_use/swift_blade",
+    "#sakuratinker:casts/single_use/swift_guard",
+    "#sakuratinker:casts/single_use/barrel",
+    "#sakuratinker:casts/single_use/battery_cell",
+    "#sakuratinker:casts/single_use/laser_medium"
+  ]
+}

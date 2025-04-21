@@ -1,0 +1,32 @@
+{
+  "stats": {
+    "tconstruct:binding": {},
+    "tconstruct:handle": {
+      "durability": 0.3,
+      "mining_speed": 0.2,
+      "melee_speed": 0.1,
+      "melee_damage": 0.2
+    },
+    "tconstruct:head": {
+      "durability": 1126,
+      "mining_speed": 7.0,
+      "mining_tier": "minecraft:netherite",
+      "melee_attack": 5.0
+    },
+    "tconstruct:limb": {
+      "durability": 400,
+      "draw_speed": 0.1,
+      "velocity": 0.1,
+      "accuracy": 0.1
+    },
+    "sakuratinker:charm_core": {},
+    "sakuratinker:charm_chain": {
+      "movement_speed": 0,
+      "health": 20,
+      "armor": 0.15,
+      "toughness": 0.1,
+      "damage": 0.15,
+      "arrow_damage": 0.15
+    }
+  }
+}

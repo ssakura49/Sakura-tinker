@@ -1,0 +1,46 @@
+{
+    "translation_key": "item.sakuratinker.laser_gun",
+    "icon": {
+      "item": "sakuratinker:laser_gun",
+      "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+    },
+    "sortIndex": 10,
+    "input_slots": [
+      {
+        "icon": "sakuratinker:barrel",
+        "translation_key": "item.sakuratinker.barrel",
+        "x": 10,
+        "y": 20,
+        "filter": {
+          "item": "sakuratinker:barrel"
+        }
+      },
+      {
+        "icon": "sakuratinker:battery_cell",
+        "translation_key": "item.sakuratinker.battery_cell",
+        "x": 53,
+        "y": 55,
+        "filter": {
+          "item": "sakuratinker:battery_cell"
+        }
+      },
+      {
+        "icon": "sakuratinker:laser_medium",
+        "translation_key": "item.sakuratinker.laser_medium",
+        "x": 33,
+        "y": 44,
+        "filter": {
+          "item": "sakuratinker:laser_medium"
+        }
+      },
+      {
+        "icon": "tconstruct:tough_handle",
+        "translation_key": "item.tconstruct.tough_handle",
+        "x": 33,
+        "y": 64,
+        "filter": {
+          "item": "tconstruct:tough_handle"
+        }
+      }
+    ]
+  }

@@ -1,0 +1,151 @@
+{
+  "parts": [
+    {
+      "path": "sakuratinker:item/tool/part/charm_chain/charm_chain",
+      "stat_type": "sakuratinker:charm_chain"
+    },
+    {
+      "path": "sakuratinker:item/tool/part/charm_core/charm_core",
+      "stat_type": "sakuratinker:charm_core"
+    },
+    {
+      "path": "sakuratinker:item/tool/tinker_charm/charm_chain",
+      "stat_type": "sakuratinker:charm_chain"
+    },
+    {
+      "path": "sakuratinker:item/tool/tinker_charm/charm_core",
+      "stat_type": "sakuratinker:charm_core"
+    },
+
+
+    {
+      "path": "sakuratinker:item/tool/part/swift_blade/swift_blade",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/part/swift_guard/swift_guard",
+      "stat_type": "tconstruct:handle"
+    },
+
+    
+    {
+      "path": "sakuratinker:item/tool/swift_sword/blade",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/swift_sword/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "sakuratinker:item/tool/swift_sword/guard",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "sakuratinker:item/tool/swift_sword/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "sakuratinker:item/tool/swift_sword/broken_blade",
+      "stat_type": "tconstruct:head"
+    },
+
+    {
+      "path": "sakuratinker:item/tool/great_sword/head1",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/great_sword/head2",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/great_sword/plate",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/great_sword/binding",
+      "stat_type": "tconstruct:binding"
+    },
+    {
+      "path": "sakuratinker:item/tool/great_sword/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "sakuratinker:item/tool/great_sword/broken_head1",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/great_sword/broken_head2",
+      "stat_type": "tconstruct:head"
+    },
+
+    
+    {
+      "path": "sakuratinker:item/tool/blade_convergence/blade",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/blade_convergence/plate",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/blade_convergence/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "sakuratinker:item/tool/blade_convergence/broken_blade",
+      "stat_type": "tconstruct:head"
+    },
+
+    {
+      "path": "sakuratinker:item/tool/vampire_knife/blade1",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/vampire_knife/blade2",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/vampire_knife/blade3",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/vampire_knife/binding",
+      "stat_type": "tconstruct:binding"
+    },
+
+    {
+      "path": "sakuratinker:item/tool/part/barrel/barrel",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/part/battery_cell/battery_cell",
+      "stat_type": "sakuratinker:battery_cell"
+    },
+    {
+      "path": "sakuratinker:item/tool/part/laser_medium/laser_medium",
+      "stat_type": "sakuratinker:laser_medium"
+    },
+
+    {
+      "path": "sakuratinker:item/tool/laser_gun/barrel",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/laser_gun/broken_barrel",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "sakuratinker:item/tool/laser_gun/battery_cell",
+      "stat_type": "sakuratinker:battery_cell"
+    },
+    {
+      "path": "sakuratinker:item/tool/laser_gun/laser_medium",
+      "stat_type": "sakuratinker:laser_medium"
+    },
+    {
+      "path": "sakuratinker:item/tool/laser_gun/tough_handle",
+      "stat_type": "tconstruct:handle"
+    }
+  ],
+  "replace": false
+}

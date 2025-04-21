@@ -1,0 +1,22 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "sakuratinker:reapers_blessing"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "sakuratinker:rootedness"
+      }
+    ],
+    "sakuratinker:charm": [
+      {
+        "name": "sakuratinker:steady_curio",
+        "level": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+    "type": "mantle:add_entry",
+    "conditions": [
+      {
+        "condition": "forge:loot_table_id",
+        "loot_table_id": "minecraft:entities/ender_dragon"
+      }
+    ],
+    "entry": {
+      "type": "minecraft:item",
+      "name": "sakuratinker:blade_convergence"
+    },
+    "functions": [
+      {
+        "function": "tconstruct:add_tool_data",
+        "materials": [
+          {
+            "type": "tconstruct:random",
+            "tier": {
+              "max": 4,
+              "min": 2
+            }
+          },
+          {
+            "type": "tconstruct:random",
+            "tier": {
+              "max": 4,
+              "min": 2
+            }
+          },
+          {
+            "type": "tconstruct:random",
+            "tier": {
+              "max": 4,
+              "min": 2
+            }
+          }
+        ]
+      }
+    ],
+    "post_conditions": [
+    ]
+  }

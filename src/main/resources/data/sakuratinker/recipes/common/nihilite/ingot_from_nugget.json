@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "tconstruct:cobalt_block",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": { "#": { "item": "sakuratinker:nihilite_nugget" }},
+  "result": {
+    "item": "sakuratinker:nihilite_ingot"
+  }
+}

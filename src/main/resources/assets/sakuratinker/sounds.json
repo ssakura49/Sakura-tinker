@@ -1,0 +1,18 @@
+{
+	"celestial_blade" : {
+		"sounds" : [
+			{
+				"name": "sakuratinker:celestial_blade",
+				"volume": 1
+			}
+		]
+	},
+	"laser_shoot" : {
+		"sounds" : [
+			{
+				"name": "sakuratinker:laser_shoot",
+				"volume": 1
+			}
+		]
+	}
+}

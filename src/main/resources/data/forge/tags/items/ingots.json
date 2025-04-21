@@ -1,0 +1,10 @@
+{
+  "replace": false,
+    "values": [
+      "#forge:ingots/soul_sakura",
+      "#forge:ingots/youkai",
+      "#forge:ingots/nihilite",
+      "#forge:ingots/eezo",
+      "#forge:ingots/arcane_alloy"
+    ]
+}

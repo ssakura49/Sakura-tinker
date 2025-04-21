@@ -1,0 +1,12 @@
+{
+  "stats": {
+    "sakuratinker:charm_core": {},
+    "sakuratinker:charm_chain": {
+      "movement_speed": 0.02,
+      "health": 8,
+      "armor": 0.05,
+      "toughness": 0.03,
+      "attack": 0.05
+    }
+  }
+}

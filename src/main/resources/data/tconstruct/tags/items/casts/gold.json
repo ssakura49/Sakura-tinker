@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "sakuratinker:charm_chain_cast",
+    "sakuratinker:charm_core_cast",
+    "sakuratinker:swift_blade_cast",
+    "sakuratinker:swift_guard_cast",
+    "sakuratinker:barrel_cast",
+    "sakuratinker:battery_cell_cast",
+    "sakuratinker:laser_medium_cast"
+  ]
+}

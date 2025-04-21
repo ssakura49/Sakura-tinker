@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "sakuratinker:youkai",
+  "temperature": 800,
+  "result": {
+    "fluid": "sakuratinker:molten_youkai",
+    "amount": 90
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "loader": "tconstruct:tool",
+    "parent": "forge:item/default-tool",
+    "textures": {
+      "barrel": "sakuratinker:item/tool/laser_gun/barrel",
+      "broken_barrel": "sakuratinker:item/tool/laser_gun/broken_barrel",
+      "battery_cell": "sakuratinker:item/tool/laser_gun/battery_cell",
+      "laser_medium": "sakuratinker:item/tool/laser_gun/laser_medium",
+      "tough_handle": "sakuratinker:item/tool/laser_gun/tough_handle"
+    },
+    "modifier_roots": [
+      "sakuratinker:item/tool/laser_gun/modifiers/"
+    ],
+    "parts": [
+      {"name": "barrel","index": 0,"broken": "broken_barrel"},
+      {"name": "battery_cell","index": 1},
+      {"name": "laser_medium","index": 2},
+      {"name": "tough_handle","index": 3}
+    ]
+  }

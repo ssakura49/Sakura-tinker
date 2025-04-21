@@ -1,0 +1,114 @@
+package com.ssakura49.sakuratinker.register;
+
+import com.ssakura49.sakuratinker.SakuraTinker;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
+import slimeknights.mantle.registration.object.EnumObject;
+import slimeknights.tconstruct.library.tools.helper.ToolBuildHandler;
+import slimeknights.tconstruct.library.tools.item.IModifiable;
+import slimeknights.tconstruct.library.tools.item.ModifiableItem;
+import slimeknights.tconstruct.library.tools.part.IMaterialItem;
+import slimeknights.tconstruct.tools.TinkerToolParts;
+
+import java.util.Objects;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
+
+import static com.ssakura49.sakuratinker.register.STItems.*;
+
+public class STGroups {
+//    public static final SynchronizedDeferredRegister<CreativeModeTab> CREATIVE_TAB = SynchronizedDeferredRegister.create(Registries.CREATIVE_MODE_TAB, SakuraTinker.MODID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SakuraTinker.MODID);
+
+    private static void acceptTool(Consumer<ItemStack> output, Supplier<? extends IModifiable> tool) {
+        ToolBuildHandler.addVariants(output, tool.get(), "");
+    }
+    private static void acceptTools(Consumer<ItemStack> output, EnumObject<?, ? extends IModifiable> tools) {
+        tools.forEach((tool) -> ToolBuildHandler.addVariants(output, tool, ""));
+    }
+    private static void acceptPart(Consumer<ItemStack> output, Supplier<? extends IMaterialItem> item) {
+        item.get().addVariants(output, "");
+    }
+    public STGroups(){
+    }
+
+    public static final RegistryObject<CreativeModeTab> MATERIAL_TAB = CREATIVE_MODE_TABS.register("st_material", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup.sakuratinker.st_material"))
+            .icon(() -> soul_sakura.get().getDefaultInstance())
+            .withTabsBefore(TinkerToolParts.tabToolParts.getId())
+            .displayItems((parameters, output) -> {
+                for (RegistryObject<Item> object : LIST_MATERIAL) {
+                    if (object.isPresent()) {
+                        output.accept(object.get());
+                    }
+                }
+            })
+            .build());
+    public static final RegistryObject<CreativeModeTab> BLOCK_TAB = CREATIVE_MODE_TABS.register("st_block", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup.sakuratinker.st_block"))
+            .icon(() -> eezo_ore.get().getDefaultInstance())
+            .withTabsBefore(TinkerToolParts.tabToolParts.getId())
+            .displayItems((parameters, output) -> {
+                for (RegistryObject<BlockItem> object : LIST_SIMPLE_BLOCK) {
+                    if (object.isPresent()) {
+                        output.accept(object.get());
+                    }
+                }
+            })
+            .build());
+    public static final RegistryObject<CreativeModeTab> TOOL_TAB = CREATIVE_MODE_TABS.register("st_tools", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup.sakuratinker.st_tools"))
+            .icon(() -> ((ModifiableItem)swift_sword.get()).getRenderTool())
+            .withTabsBefore(TinkerToolParts.tabToolParts.getId())
+            .displayItems(STGroups::addToolItems)
+            .build());
+
+
+
+
+    private static void addToolItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) {
+        Objects.requireNonNull(output);
+        Consumer<ItemStack> outputTool = output::accept;
+        Consumer<ItemStack> outputPart = output::accept;
+        acceptPart(outputPart, charm_chain);
+        acceptPart(outputPart, charm_core);
+        acceptPart(outputPart, swift_blade);
+        acceptPart(outputPart, swift_guard);
+        acceptPart(outputPart, barrel);
+        acceptPart(outputPart, laser_medium);
+        acceptPart(outputPart, battery_cell);
+        acceptTool(outputTool, tinker_charm);
+        acceptTool(outputTool, great_sword);
+        acceptTool(outputTool, swift_sword);
+        acceptTool(outputTool, vampire_knife);
+        acceptTool(outputTool, blade_convergence);
+        acceptTool(outputTool, laser_gun);
+        output.accept(charm_chain_cast.get());
+        output.accept(charm_chain_red_sand_cast.get());
+        output.accept(charm_chain_sand_cast.get());
+        output.accept(charm_core_cast.get());
+        output.accept(charm_core_red_sand_cast.get());
+        output.accept(charm_core_sand_cast.get());
+        output.accept(swift_blade_cast.get());
+        output.accept(swift_blade_red_sand_cast.get());
+        output.accept(swift_blade_sand_cast.get());
+        output.accept(swift_guard_cast.get());
+        output.accept(swift_guard_red_sand_cast.get());
+        output.accept(swift_guard_sand_cast.get());
+        output.accept(barrel_cast.get());
+        output.accept(barrel_red_sand_cast.get());
+        output.accept(barrel_sand_cast.get());
+        output.accept(battery_cell_cast.get());
+        output.accept(battery_cell_red_sand_cast.get());
+        output.accept(battery_cell_sand_cast.get());
+        output.accept(laser_medium_cast.get());
+        output.accept(laser_medium_red_sand_cast.get());
+        output.accept(laser_medium_sand_cast.get());
+    }
+}

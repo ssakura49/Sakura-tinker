@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:part_builder",
+  "pattern": "sakuratinker:battery_cell",
+  "pattern_item": [
+    {
+      "tag": "tconstruct:patterns/default"
+    },
+    {
+      "item": "sakuratinker:battery_cell_cast"
+    }
+  ],
+  "cost": 4,
+  "result": {
+    "item": "sakuratinker:battery_cell"
+  }
+}

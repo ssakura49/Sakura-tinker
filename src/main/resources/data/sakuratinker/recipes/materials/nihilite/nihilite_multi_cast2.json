@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/nugget"
+  },
+  "cast_consumed": false,
+  "fluid": {
+    "name": "sakuratinker:molten_nihilite",
+    "amount": 10
+  },
+  "result": "sakuratinker:nihilite_nugget",
+  "cooling_time": 30
+}

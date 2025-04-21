@@ -1,0 +1,56 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "sakuratinker:omnipotence"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:natural_fit_upgrades"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:natural_fit_abilities"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:infinitum"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:bedrock_breaker"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "sakuratinker:null_almighty"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:celestial"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:gale"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:eternity"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:infinitum"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:natural_fit_upgrades"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:natural_fit_defense"
+      }
+    ]
+  }
+}

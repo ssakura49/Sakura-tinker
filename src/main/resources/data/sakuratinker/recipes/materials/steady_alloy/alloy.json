@@ -1,0 +1,22 @@
+{
+    "type": "tconstruct:alloy",
+    "inputs": [
+      {
+        "name": "sakuratinker:molten_nihilite",
+        "amount": 90
+      },
+      {
+        "name": "tconstruct:molten_netherite",
+        "amount": 90
+      },
+      {
+        "name": "tconstruct:molten_diamond",
+        "amount": 100
+      }
+    ],
+    "result": {
+      "fluid": "sakuratinker:molten_steady_alloy",
+      "amount": 180
+    },
+    "temperature": 2000
+  }

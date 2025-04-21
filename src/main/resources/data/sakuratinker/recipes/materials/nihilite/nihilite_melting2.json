@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "sakuratinker:nihilite_nugget"
+  },
+  "result": {
+    "fluid": "sakuratinker:molten_nihilite",
+    "amount": 10
+  },
+  "temperature": 1400,
+  "time": 30
+}

@@ -1,0 +1,65 @@
+{
+  "stats": {
+    "tconstruct:binding": {},
+    "tconstruct:handle": {
+      "durability": 10,
+      "mining_speed": 1.0,
+      "melee_speed": 10,
+      "melee_damage": 10
+    },
+    "tconstruct:head": {
+      "durability": 66666,
+      "mining_speed": 10.0,
+      "mining_tier": "sakuratinker:infinity",
+      "melee_attack": 99999.0
+    },
+    "tconstruct:limb": {
+      "durability": 8800,
+      "draw_speed": 2.0,
+      "velocity": 1.0,
+      "accuracy": 3.0
+    },
+    "tconstruct:maille": {},
+    "tconstruct:plating_helmet": {
+      "armor": 35.0,
+      "durability": 7000,
+      "knockback_resistance": 0.25,
+      "toughness": 35.0
+    },
+    "tconstruct:plating_chestplate": {
+      "armor": 60.0,
+      "durability": 11000,
+      "knockback_resistance": 0.25,
+      "toughness": 60.0
+    },
+    "tconstruct:plating_leggings": {
+      "armor": 50.0,
+      "durability": 7800,
+      "knockback_resistance": 0.25,
+      "toughness": 50.0
+    },
+    "tconstruct:plating_boots": {
+      "armor": 30.0,
+      "durability": 6800,
+      "knockback_resistance": 0.25,
+      "toughness": 30.0
+    },
+    "sakuratinker:charm_core": {},
+    "sakuratinker:charm_chain": {
+      "movement_speed": 0.6,
+      "health": 1000,
+      "armor": 3.0,
+      "toughness": 3.0,
+      "damage": 5.0,
+      "arrow_damage": 5.0
+    },
+    "sakuratinker:battery_cell": {
+      "energy_capacity": 90000000,
+      "durability": 5.0
+    },
+    "sakuratinker:laser_medium": {
+      "range": 128,
+      "cooldown": 0.1
+    }
+  }
+}

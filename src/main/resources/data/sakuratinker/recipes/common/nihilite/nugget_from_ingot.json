@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tconstruct:cobalt_ingot",
+  "ingredients": [{ "item": "sakuratinker:nihilite_ingot" }],
+  "result": {
+    "item": "sakuratinker:nihilite_nugget",
+    "count": 9
+  }
+}

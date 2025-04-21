@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "sakuratinker:fiery_crystal"
+  },
+  "result": {
+    "fluid": "sakuratinker:molten_fiery_crystal",
+    "amount": 90
+  },
+  "temperature": 1200,
+  "time": 20
+}

@@ -1,0 +1,18 @@
+{
+    "loader": "tconstruct:tool",
+    "parent": "forge:item/default-tool",
+    "textures": {
+      "blade": "sakuratinker:item/tool/blade_convergence/blade",
+      "broken_blade": "sakuratinker:item/tool/blade_convergence/broken_blade",
+      "plate": "sakuratinker:item/tool/blade_convergence/plate",
+      "handle": "sakuratinker:item/tool/blade_convergence/handle"
+    },
+    "modifier_roots": [
+      "sakuratinker:item/tool/blade_convergence/modifiers/"
+    ],
+    "parts": [
+      { "name": "blade", "index": 0, "broken": "broken_blade" },
+      { "name": "plate", "index": 1 },
+      { "name": "handle", "index": 2 }
+    ]
+  }

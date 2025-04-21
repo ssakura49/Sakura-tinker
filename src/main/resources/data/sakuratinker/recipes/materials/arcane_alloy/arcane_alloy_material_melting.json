@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "sakuratinker:arcane_alloy",
+  "temperature": 800,
+  "result": {
+    "fluid": "sakuratinker:molten_arcane_alloy",
+    "amount": 90
+  }
+}

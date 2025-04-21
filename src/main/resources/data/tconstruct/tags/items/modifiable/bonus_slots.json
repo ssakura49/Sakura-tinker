@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "sakuratinker:tinker_charm",
+    "sakuratinker:great_sword",
+    "sakuratinker:swift_sword",
+    "sakuratinker:vampire_knife",
+    "sakuratinker:blade_convergence",
+    "sakuratinker:laser_gun"
+  ]
+}

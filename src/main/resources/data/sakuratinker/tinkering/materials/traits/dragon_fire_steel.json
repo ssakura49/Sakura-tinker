@@ -1,0 +1,28 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "sakuratinker:fiery_fire"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:dragon_martyr"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "sakuratinker:breath_resistance"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:fire_immunity"
+      },
+      {
+        "level": 2,
+        "name": "sakuratinker:dragon_soul"
+      }
+    ]
+  }
+}

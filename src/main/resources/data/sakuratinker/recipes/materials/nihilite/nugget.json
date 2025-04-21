@@ -1,0 +1,9 @@
+{
+    "type": "tconstruct:material",
+    "ingredient": {
+      "item": "sakuratinker:nihilite_nugget"
+    },
+    "value": 1,
+    "needed": 9,
+    "material": "sakuratinker:nihilite"
+  }

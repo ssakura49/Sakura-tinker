@@ -1,0 +1,14 @@
+{
+    "tool": "sakuratinker:tinker_charm",
+    "text": [
+      { "text": "护符。由护符链和护符镶饰组装。" },
+      { "text": "护符链会提供额外的基础属性，护符镶饰仅提供材料特性。", "paragraph": true }
+    ],
+    "properties": [
+      "移动速度",
+      "护甲值",
+      "盔甲韧性",
+      "攻击伤害",
+      "远程伤害"
+    ]
+}

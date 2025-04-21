@@ -1,0 +1,57 @@
+{
+  "stats": {
+    "tconstruct:binding": {},
+    "tconstruct:handle": {
+      "durability": 0.1,
+      "mining_speed": 0.0,
+      "melee_speed": -0.1,
+      "melee_damage": -0.05
+    },
+    "tconstruct:head": {
+      "durability": 320,
+      "mining_speed": 4,
+      "mining_tier": "minecraft:iron",
+      "melee_attack": 2.0
+    },
+    "tconstruct:limb": {
+      "durability": 300,
+      "draw_speed": -0.2,
+      "velocity": 0.1,
+      "accuracy": 0.0
+    },
+    "tconstruct:grip": {
+      "durability": 0.05,
+      "accuracy": 0.05,
+      "melee_damage": 2.0
+    },
+    "tconstruct:maille": {},
+    "tconstruct:plating_boots": {
+      "armor": 2.0,
+      "durability": 195
+    },
+    "tconstruct:plating_chestplate": {
+      "armor": 5.0,
+      "durability": 240
+    },
+    "tconstruct:plating_helmet": {
+      "armor": 2.0,
+      "durability": 165
+    },
+    "tconstruct:plating_leggings": {
+      "armor": 4.0,
+      "durability": 225
+    },
+    "tconstruct:plating_shield": {
+      "durability": 270
+    },
+    "sakuratinker:charm_core": {},
+    "sakuratinker:charm_chain": {
+      "movement_speed": 0.1,
+      "health": 18,
+      "armor": 0.05,
+      "toughness": 0.1,
+      "damage": 0.3,
+      "arrow_damage": 0.2
+    }
+  }
+}

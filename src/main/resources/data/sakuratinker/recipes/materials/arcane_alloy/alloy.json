@@ -1,0 +1,24 @@
+{
+    "type": "tconstruct:alloy",
+    "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "irons_spellbooks"
+    }
+  ],
+    "inputs": [
+      {
+        "name": "tconstruct:molten_gold",
+        "amount": 90
+      },
+      {
+        "name": "sakuratinker:molten_arcane_salvage",
+        "amount": 90
+      }
+    ],
+    "result": {
+      "fluid": "sakuratinker:molten_arcane_alloy",
+      "amount": 180
+    },
+    "temperature": 1500
+  }

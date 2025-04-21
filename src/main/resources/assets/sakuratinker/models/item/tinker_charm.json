@@ -1,0 +1,21 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "charm_chain": "sakuratinker:item/tool/part/charm_chain/charm_chain",
+    "charm_core": "sakuratinker:item/tool/part/charm_core/charm_core"
+  },
+  "modifier_roots": [
+    "sakuratinker:item/tool/tinker_charm/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "charm_chain",
+      "index": 1
+    },
+    {
+      "name": "charm_core",
+      "index": 0
+    }
+  ]
+}

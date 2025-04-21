@@ -1,0 +1,19 @@
+{
+    "loader": "tconstruct:tool",
+    "parent": "forge:item/default-tool",
+    "textures": {
+      "blade1": "sakuratinker:item/tool/vampire_knife/blade1",
+      "blade2": "sakuratinker:item/tool/vampire_knife/blade2",
+      "blade3": "sakuratinker:item/tool/vampire_knife/blade3",
+      "binding": "sakuratinker:item/tool/vampire_knife/binding"
+    },
+    "modifier_roots": [
+      "sakuratinker:item/tool/vampire_knife/modifiers/"
+    ],
+    "parts": [
+      { "name": "blade1", "index": 0},
+      { "name": "blade2", "index": 1 },
+      { "name": "blade3", "index": 2 },
+      { "name": "binding", "index": 3 }
+    ]
+  }

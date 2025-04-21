@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "sakuratinker:charm_core": {},
+    "sakuratinker:charm_chain": {
+      "movement_speed": 0.05,
+      "health": 30,
+      "armor": 0.25,
+      "toughness": 0.1,
+      "attack": 0.2
+    },
+    "sakuratinker:battery_cell": {
+      "energy_capacity": 80000,
+      "durability": 0.6
+    },
+    "sakuratinker:laser_medium": {
+      "range": 40,
+      "cooldown": 0.4
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "name": "sakuratinker:molten_fiery_crystal",
+    "amount": 90
+  },
+  "temperature": 1200,
+  "output": "sakuratinker:fiery_crystal"
+}

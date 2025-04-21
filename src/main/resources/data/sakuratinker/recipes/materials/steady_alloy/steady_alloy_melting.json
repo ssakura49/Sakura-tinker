@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "sakuratinker:steady_alloy"
+  },
+  "result": {
+    "fluid": "sakuratinker:molten_steady_alloy",
+    "amount": 90
+  },
+  "temperature": 2000,
+  "time": 200
+}

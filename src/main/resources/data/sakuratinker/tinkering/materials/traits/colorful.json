@@ -1,0 +1,30 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "sakuratinker:pain_resonance"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:infinitum"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "sakuratinker:absorption"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:infinitum"
+      }
+    ],
+    "sakuratinker:charm": [
+      {
+        "level": 1,
+        "name": "sakuratinker:colorization"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+    "translation_key": "item.sakuratinker.swift_sword",
+    "icon": {
+      "item": "sakuratinker:swift_sword",
+      "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+    },
+    "sortIndex": 4,
+    "input_slots": [
+      {
+        "icon": "sakuratinker:swift_blade",
+        "translation_key": "item.sakuratinker.swift_blade",
+        "x": 53,
+        "y": 22,
+        "filter": {
+          "item": "sakuratinker:swift_blade"
+        }
+      },
+      {
+        "icon": "sakuratinker:swift_guard",
+        "translation_key": "item.sakuratinker.swift_guard",
+        "x": 33,
+        "y": 44,
+        "filter": {
+          "item": "sakuratinker:swift_guard"
+        }
+      },
+      {
+        "icon": "tconstruct:tool_binding",
+        "translation_key": "item.tconstruct.tool_binding",
+        "x": 33,
+        "y": 64,
+        "filter": {
+          "item": "tconstruct:tool_binding"
+        }
+      },
+      {
+        "icon": "tconstruct:tool_handle",
+        "translation_key": "item.tconstruct.tool_handle",
+        "x": 10,
+        "y": 64,
+        "filter": {
+          "item": "tconstruct:tool_handle"
+        }
+      }
+    ]
+  }

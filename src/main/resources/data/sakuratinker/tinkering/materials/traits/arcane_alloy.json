@@ -1,0 +1,18 @@
+{
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "sakuratinker:magician"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:elemental_mastery"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:fountain_magic"
+      }
+    ]
+  }
+}
