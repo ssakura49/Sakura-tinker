@@ -4,13 +4,13 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "sakuratinker.refmap.json",
   "mixins": [
+    "LivingEntityAccessor",
     "LivingEntityMixin"
   ],
   "client": [
-
+    "ItemRendererAccessor"
   ],
   "server": [
-
   ],
   "injectors": {
     "defaultRequire": 1

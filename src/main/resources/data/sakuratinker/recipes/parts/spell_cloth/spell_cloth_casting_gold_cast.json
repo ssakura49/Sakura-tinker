@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:table_casting_material",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/spell_cloth"
+  },
+  "item_cost": 3,
+  "result": "sakuratinker:spell_cloth"
+}

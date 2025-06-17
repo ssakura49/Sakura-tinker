@@ -143,19 +143,16 @@ public class SoulSakuraSealRecipe implements ITinkerStationRecipe {
     }
 
     @Override
-    @Deprecated
     public @NotNull NonNullList<ItemStack> getRemainingItems(@NotNull ITinkerStationContainer inv) {
         return NonNullList.of(ItemStack.EMPTY, new ItemStack[0]);
     }
 
     @Override
-    @Deprecated
     public ItemStack assemble(ITinkerStationContainer inv, RegistryAccess access) {
         return this.getResultItem(access).copy();
     }
 
     @Override
-    @Deprecated
     public ItemStack getResultItem(RegistryAccess registryAccess) {
         return ItemStack.EMPTY;
     }
@@ -176,7 +173,6 @@ public class SoulSakuraSealRecipe implements ITinkerStationRecipe {
     }
 
     @Override
-    @Deprecated
     public boolean canCraftInDimensions(int width, int height) {
         return true;
     }

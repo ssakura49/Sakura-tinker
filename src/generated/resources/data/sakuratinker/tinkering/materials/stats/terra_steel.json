@@ -1,0 +1,51 @@
+{
+  "stats": {
+    "sakuratinker:phantom_core": {
+      "phantom_amount": 2.0,
+      "range": 32.0
+    },
+    "tconstruct:binding": {},
+    "tconstruct:handle": {
+      "durability": 0.7,
+      "melee_damage": 0.6,
+      "melee_speed": 0.55,
+      "mining_speed": 0.55
+    },
+    "tconstruct:head": {
+      "durability": 1500,
+      "melee_attack": 6.0,
+      "mining_speed": 7.0,
+      "mining_tier": "minecraft:diamond"
+    },
+    "tconstruct:maille": {},
+    "tconstruct:plating_boots": {
+      "armor": 3.0,
+      "durability": 1300,
+      "knockback_resistance": 1.5,
+      "toughness": 3.0
+    },
+    "tconstruct:plating_chestplate": {
+      "armor": 8.0,
+      "durability": 1600,
+      "knockback_resistance": 1.5,
+      "toughness": 3.0
+    },
+    "tconstruct:plating_helmet": {
+      "armor": 4.0,
+      "durability": 1100,
+      "knockback_resistance": 1.5,
+      "toughness": 3.0
+    },
+    "tconstruct:plating_leggings": {
+      "armor": 6.0,
+      "durability": 1500,
+      "knockback_resistance": 1.5,
+      "toughness": 3.0
+    },
+    "tconstruct:plating_shield": {
+      "durability": 1800,
+      "knockback_resistance": 1.5,
+      "toughness": 3.0
+    }
+  }
+}

@@ -18,8 +18,8 @@
     {
       "icon": "sakuratinker:charm_core",
       "translation_key": "item.sakuratinker.charm_core",
-      "x": 30,
-      "y": 50,
+      "x": 25,
+      "y": 54,
       "filter": {
         "item": "sakuratinker:charm_core"
       }
@@ -27,8 +27,8 @@
     {
       "icon": "sakuratinker:charm_chain",
       "translation_key": "item.sakuratinker.charm_chain",
-      "x": 50,
-      "y": 30,
+      "x": 45,
+      "y": 34,
       "filter": {
         "item": "sakuratinker:charm_chain"
       }

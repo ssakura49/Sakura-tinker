@@ -1,6 +1,7 @@
 package com.ssakura49.sakuratinker.content.tinkering.modifiers.misc;
 
 import com.ssakura49.sakuratinker.generic.BaseModifier;
+import com.ssakura49.sakuratinker.utils.tinker.ToolUtil;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -29,12 +30,14 @@ public class DisslovingModifier extends BaseModifier {
             if (player != null) {
                 ItemStack heldItem = player.getMainHandItem();
                 IToolStackView tool = ToolStack.from(heldItem);
-                if (tool.getModifierLevel(this) > 0) {
-                    float r = random.nextFloat();
-                    if (r <= 0.75) {
-                        event.setDroppedExperience(0);
-                    } else if (r > 0.95) {
-                        event.setDroppedExperience(event.getDroppedExperience() * (random.nextInt(3) + 2));
+                if (!ToolUtil.checkTool(heldItem)) {
+                    if (tool.getModifierLevel(this) > 0) {
+                        float r = random.nextFloat();
+                        if (r <= 0.75) {
+                            event.setDroppedExperience(0);
+                        } else if (r > 0.95) {
+                            event.setDroppedExperience(event.getDroppedExperience() * (random.nextInt(3) + 2));
+                        }
                     }
                 }
             }

@@ -16,8 +16,8 @@ public class TortureEffect extends NoMilkEffect {
     private static final Map<UUID, Vec3> LAST_POSITIONS = new HashMap<>();
     private static final Map<UUID, Double> ACCUMULATED_DISTANCE = new HashMap<>();
 
-    private final Supplier<Double> baseDamageThreshold = () -> STConfig.COMMON.TORTURE_BASE_DAMAGE_THRESHOLD.get();
-    private final Supplier<Double> damageMultiplier = () -> STConfig.COMMON.TORTURE_DAMAGE_MULTIPLIER.get();
+    private final Supplier<Double> baseDamageThreshold = STConfig.COMMON.TORTURE_BASE_DAMAGE_THRESHOLD;
+    private final Supplier<Double> damageMultiplier = STConfig.COMMON.TORTURE_DAMAGE_MULTIPLIER;
 
     public TortureEffect() {
         super(MobEffectCategory.HARMFUL, 0xFF0000,true);

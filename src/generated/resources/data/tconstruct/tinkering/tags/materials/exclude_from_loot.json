@@ -1,0 +1,36 @@
+{
+  "values": [
+    {
+      "id": "sakuratinker:goozma",
+      "required": false
+    },
+    {
+      "id": "sakuratinker:colorful",
+      "required": false
+    },
+    {
+      "id": "sakuratinker:infinity",
+      "required": false
+    },
+    {
+      "id": "sakuratinker:nihilite",
+      "required": false
+    },
+    {
+      "id": "sakuratinker:steady_alloy",
+      "required": false
+    },
+    {
+      "id": "sakuratinker:elementium",
+      "required": false
+    },
+    {
+      "id": "sakuratinker:terra_steel",
+      "required": false
+    },
+    {
+      "id": "sakuratinker:gaia",
+      "required": false
+    }
+  ]
+}

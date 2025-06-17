@@ -1,0 +1,27 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default",
+  "textures": {
+    "plating": "sakuratinker:item/tool/armor/embedded/chestplate/plating_broken",
+    "embedding": "sakuratinker:item/tool/armor/embedded/leggings/embedding",
+    "maille": "sakuratinker:item/tool/armor/embedded/chestplate/maille_broken"
+  },
+  "modifier_roots": [
+    "sakuratinker:item/tool/armor/embedded/chestplate/modifiers/broken/",
+    "sakuratinker:item/tool/armor/embedded/chestplate/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "plating",
+      "index": 1
+    },
+    {
+      "name": "maille",
+      "index": 2
+    },
+    { 
+      "name": "embedding", 
+      "index": 0
+    }
+  ]
+}

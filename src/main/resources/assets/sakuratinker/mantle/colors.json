@@ -15,7 +15,12 @@
     "dragon_fire_steel": "#ccbbc4",
     "dragon_ice_steel": "#d4f3ff",
     "dragon_lightning_steel": "#9a83b5",
-    "steady_alloy": "#473C8B"
+    "steady_alloy": "#473C8B",
+    "south_star": "#fae08e",
+    "terracryst": "#9ad1c1",
+    "prometheum": "#6e9e61",
+    "orichalcum": "#7348d5",
+    "aurumos": "#f4f18f"
   },
   "modifier.sakuratinker": {
     "solid":"#00BFFF",
@@ -94,6 +99,30 @@
     "elemental_mastery":"#FFDAB9",
     "fountain_magic":"#6495ED",
     "dragon_martyr":"#9c2f53",
-    "breath_resistance":"#7800c7"
+    "breath_resistance":"#7800c7",
+    "magic_shield":"#fae08e",
+    "essence_earth":"#6e9e61",
+    "heavy_weight":"#9703c3",
+    "magic_blade":"#00aaee",
+    "spell_power":"#5cf8f2",
+    "solar_burning":"#d6d244",
+    "rejuvenating":"#5cff76",
+    "feather":"#d6d244",
+    "hydra_will":"#1e6a48",
+    "precision_strike":"#db6414",
+    "energy_surge":"#0061f2",
+    "whetstone":"#e58d3d",
+    "polishing":"#FFD700",
+    "botany_is_tech":"#67b9ee",
+
+    "life_ratio":"#de9750",
+    "strengthen_decomposition":"#ccc68a",
+    "fungal_parasites":"#b9b09a",
+    "coagulation":"#bdd9d9",
+    "danger_sense":"#db6414",
+    "incomplete_transformation":"#3feb37",
+    "mucilaginous_shell":"#52498e",
+    "fusion_burn":"#eb4d37",
+    "god_of_slime":"#8937eb"
   }
 }

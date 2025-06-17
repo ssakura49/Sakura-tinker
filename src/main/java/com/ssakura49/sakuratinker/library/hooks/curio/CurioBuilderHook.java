@@ -3,31 +3,29 @@ package com.ssakura49.sakuratinker.library.hooks.curio;
 import com.ssakura49.sakuratinker.library.logic.context.AttributeData;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import top.theillusivec4.curios.api.SlotContext;
 
 import java.util.Collection;
+import java.util.UUID;
+import java.util.function.BiConsumer;
 
 public interface CurioBuilderHook {
-    //每刻
     default void onCurioTick(IToolStackView curio, SlotContext context, LivingEntity entity, int level, ItemStack stack) {
     }
-    //添加属性修饰符
-    default void addCurioAttribute(IToolStackView curio, SlotContext context, LivingEntity entity, int level, AttributeData attr) {
+    default void modifyCurioAttribute(IToolStackView curio, SlotContext context, UUID uuid, int level, BiConsumer<Attribute, AttributeModifier> consumer) {
     }
-    //装备时触发
     default void onCurioEquip(IToolStackView curio, SlotContext context, LivingEntity entity, int level, ItemStack prevStack, ItemStack stack) {
     }
-    //卸下时触发
     default void onCurioUnequip(IToolStackView curio, SlotContext context, LivingEntity entity, int level, ItemStack newStack, ItemStack stack) {
     }
-    //计算幸运（Fortune）时触发
     default int onCurioGetFortune(IToolStackView curio, SlotContext slotContext, LootContext lootContext, ItemStack stack, int fortune, int level) {
         return fortune;
     }
-    //在计算抢夺（Looting）时触发
     default int onCurioGetLooting(IToolStackView curio, SlotContext slotContext, DamageSource source, LivingEntity target, ItemStack stack, int Looting, int level) {
         return Looting;
     }
@@ -44,9 +42,9 @@ public interface CurioBuilderHook {
 
         }
 
-        public void addCurioAttribute(IToolStackView curio, SlotContext context, LivingEntity entity, int level, AttributeData attr) {
+        public void modifyCurioAttribute(IToolStackView curio, SlotContext context, UUID uuid, int level, BiConsumer<Attribute, AttributeModifier> consumer) {
             for(CurioBuilderHook module : this.modules) {
-                module.addCurioAttribute(curio, context, entity, level, attr);
+                module.modifyCurioAttribute(curio, context, uuid, level, consumer);
             }
 
         }

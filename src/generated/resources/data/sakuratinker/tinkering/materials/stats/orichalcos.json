@@ -1,0 +1,46 @@
+{
+  "stats": {
+    "sakuratinker:phantom_core": {
+      "phantom_amount": 3.0,
+      "range": 64.0
+    },
+    "tconstruct:binding": {},
+    "tconstruct:handle": {
+      "durability": 0.6,
+      "melee_damage": 0.5,
+      "melee_speed": 0.4,
+      "mining_speed": 0.6
+    },
+    "tconstruct:head": {
+      "durability": 1634,
+      "melee_attack": 9.0,
+      "mining_speed": 7.0,
+      "mining_tier": "minecraft:netherite"
+    },
+    "tconstruct:maille": {},
+    "tconstruct:plating_boots": {
+      "armor": 4.0,
+      "durability": 1040,
+      "knockback_resistance": 0.25,
+      "toughness": 5.0
+    },
+    "tconstruct:plating_chestplate": {
+      "armor": 9.0,
+      "durability": 1280,
+      "knockback_resistance": 0.25,
+      "toughness": 5.0
+    },
+    "tconstruct:plating_helmet": {
+      "armor": 6.0,
+      "durability": 880,
+      "knockback_resistance": 0.25,
+      "toughness": 5.0
+    },
+    "tconstruct:plating_leggings": {
+      "armor": 5.0,
+      "durability": 1200,
+      "knockback_resistance": 0.25,
+      "toughness": 5.0
+    }
+  }
+}

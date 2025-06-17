@@ -1,0 +1,26 @@
+{
+    "type": "tconstruct:alloy",
+    "inputs": [
+      {
+        "name": "sakuratinker:molten_aurumos",
+        "amount": 90
+      },
+      {
+        "name": "sakuratinker:molten_eezo",
+        "amount": 90
+      },
+      {
+        "name": "tconstruct:molten_manyullyn",
+        "amount": 90
+      },
+      {
+        "name": "tconstruct:molten_diamond",
+        "amount": 100
+      }
+    ],
+    "result": {
+      "fluid": "sakuratinker:molten_nihilite",
+      "amount": 90
+    },
+    "temperature": 2000
+  }

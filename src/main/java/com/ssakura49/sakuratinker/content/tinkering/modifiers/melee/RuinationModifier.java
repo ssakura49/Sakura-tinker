@@ -1,5 +1,6 @@
 package com.ssakura49.sakuratinker.content.tinkering.modifiers.melee;
 
+import com.ssakura49.sakuratinker.STConfig;
 import com.ssakura49.sakuratinker.generic.BaseModifier;
 import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
@@ -11,7 +12,8 @@ public class RuinationModifier extends BaseModifier {
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         LivingEntity target = context.getLivingTarget();
         if (target != null && !target.level().isClientSide) {
-            float extraDamage = target.getHealth() * (0.03f * modifier.getLevel());
+            float damageFactor = STConfig.COMMON.RUINATION_DAMAGE_FACTOR.get().floatValue();
+            float extraDamage = target.getHealth() * (damageFactor * modifier.getLevel());
             target.hurt(target.damageSources().generic(), extraDamage);
         }
     }

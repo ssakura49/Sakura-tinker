@@ -4,16 +4,16 @@
         "type": "tconstruct:part_stats",
         "parts": [
             {
-                "item": "tconstruct:broad_blade",
-                "scale": 0.75
-            },
-            {
-                "item": "tconstruct:broad_blade",
+                "item": "sakuratinker:great_blade",
                 "scale": 0.75
             },
             {
                 "item": "tconstruct:large_plate",
-                "scale": 0.25
+                "scale": 0.75
+            },
+            {
+                "item": "tconstruct:large_plate",
+                "scale": 0.75
             },
             {
                 "item": "tconstruct:tough_binding",

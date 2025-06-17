@@ -1,0 +1,24 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "sakuratinker:devour_soul"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:soul_intake"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "sakuratinker:soul_seeker"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:soul_intake"
+      }
+    ]
+  }
+}

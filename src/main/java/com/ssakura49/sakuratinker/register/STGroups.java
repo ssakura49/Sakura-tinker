@@ -1,6 +1,7 @@
 package com.ssakura49.sakuratinker.register;
 
 import com.ssakura49.sakuratinker.SakuraTinker;
+import com.ssakura49.sakuratinker.utils.ModListUtil;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
@@ -16,10 +17,13 @@ import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 import slimeknights.tconstruct.library.tools.part.IMaterialItem;
 import slimeknights.tconstruct.tools.TinkerToolParts;
 
+import java.awt.desktop.OpenURIEvent;
 import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
+import static com.ssakura49.sakuratinker.compat.ExtraBotany.ExtraBotanyCompat.*;
+import static com.ssakura49.sakuratinker.compat.IronSpellBooks.ISSCompat.*;
 import static com.ssakura49.sakuratinker.register.STItems.*;
 
 public class STGroups {
@@ -69,9 +73,6 @@ public class STGroups {
             .displayItems(STGroups::addToolItems)
             .build());
 
-
-
-
     private static void addToolItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) {
         Objects.requireNonNull(output);
         Consumer<ItemStack> outputTool = output::accept;
@@ -82,13 +83,43 @@ public class STGroups {
         acceptPart(outputPart, swift_guard);
         acceptPart(outputPart, barrel);
         acceptPart(outputPart, laser_medium);
-        acceptPart(outputPart, battery_cell);
+        acceptPart(outputPart, energy_unit);
+        acceptPart(outputPart, blade);
+        acceptPart(outputPart, arrow_head);
+        acceptPart(outputPart, arrow_shaft);
+        acceptPart(outputPart, fletching);
+        acceptPart(outputPart, blade_box);
+        if (ModListUtil.ISSLoaded) {
+            acceptPart(outputPart, book_cover);
+            acceptPart(outputPart, spell_cloth);
+        }
+        acceptPart(outputPart, great_blade);
+        acceptPart(outputPart, shell);
+        acceptPart(outputPart, flag);
+        acceptPart(outputPart, fox_mask_main);
+        acceptPart(outputPart, fox_mask_core);
+        if (ModListUtil.ExtraBotany) {
+            acceptPart(outputPart, phantom_core);
+        }
         acceptTool(outputTool, tinker_charm);
         acceptTool(outputTool, great_sword);
         acceptTool(outputTool, swift_sword);
         acceptTool(outputTool, vampire_knife);
         acceptTool(outputTool, blade_convergence);
         acceptTool(outputTool, laser_gun);
+        acceptTool(outputTool, shuriken);
+        acceptTool(outputTool, tinker_arrow);
+        if (ModListUtil.ISSLoaded) {
+            acceptTool(outputTool, tinker_spell_book);
+        }
+        acceptTool(outputTool, grappling_hook);
+        acceptTool(outputTool, power_bank);
+        acceptTool(outputTool, battle_flag);
+        acceptTool(outputTool, fox_mask);
+        if (ModListUtil.ExtraBotany) {
+            acceptTool(outputTool, first_fractal);
+        }
+        acceptTools(outputTool, embeddedArmor);
         output.accept(charm_chain_cast.get());
         output.accept(charm_chain_red_sand_cast.get());
         output.accept(charm_chain_sand_cast.get());
@@ -104,11 +135,42 @@ public class STGroups {
         output.accept(barrel_cast.get());
         output.accept(barrel_red_sand_cast.get());
         output.accept(barrel_sand_cast.get());
-        output.accept(battery_cell_cast.get());
-        output.accept(battery_cell_red_sand_cast.get());
-        output.accept(battery_cell_sand_cast.get());
+        output.accept(energy_unit_cast.get());
+        output.accept(energy_unit_red_sand_cast.get());
+        output.accept(energy_unit_sand_cast.get());
         output.accept(laser_medium_cast.get());
         output.accept(laser_medium_red_sand_cast.get());
         output.accept(laser_medium_sand_cast.get());
+        output.accept(blade_cast.get());
+        output.accept(blade_red_sand_cast.get());
+        output.accept(blade_sand_cast.get());
+        output.accept(arrow_head_cast.get());
+        output.accept(arrow_head_red_sand_cast.get());
+        output.accept(arrow_head_sand_cast.get());
+        output.accept(arrow_shaft_cast.get());
+        output.accept(arrow_shaft_red_sand_cast.get());
+        output.accept(arrow_shaft_sand_cast.get());
+        if (ModListUtil.ISSLoaded) {
+            output.accept(book_cover_cast.get());
+            output.accept(book_cover_red_sand_cast.get());
+            output.accept(book_cover_sand_cast.get());
+            output.accept(spell_cloth_cast.get());
+            output.accept(spell_cloth_red_sand_cast.get());
+            output.accept(spell_cloth_sand_cast.get());
+        }
+        output.accept(great_blade_cast.get());
+        output.accept(great_blade_red_sand_cast.get());
+        output.accept(great_blade_sand_cast.get());
+        output.accept(shell_cast.get());
+        output.accept(shell_red_sand_cast.get());
+        output.accept(shell_sand_cast.get());
+        output.accept(flag_cast.get());
+        output.accept(flag_red_sand_cast.get());
+        output.accept(flag_sand_cast.get());
+        if (ModListUtil.ExtraBotany) {
+            output.accept(phantom_core_cast.get());
+            output.accept(phantom_core_red_sand_cast.get());
+            output.accept(phantom_core_sand_cast.get());
+        }
     }
 }

@@ -1,0 +1,24 @@
+{
+  "default": [
+    {
+      "level": 2,
+      "name": "etstlib:mana_repair"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:pixie"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 2,
+        "name": "etstlib:mana_repair"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:pixie_armor"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "add_cosmetic": false,
+  "drop_rule": "DEFAULT",
+  "icon": "sakuratinker:slot/empty_fox_mask_slot",
+  "operation": "SET",
+  "order": 10,
+  "render_toggle": true,
+  "replace": false,
+  "size": 1,
+  "use_native_gui": true
+}

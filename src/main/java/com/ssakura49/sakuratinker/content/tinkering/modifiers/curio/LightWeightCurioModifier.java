@@ -1,7 +1,7 @@
 package com.ssakura49.sakuratinker.content.tinkering.modifiers.curio;
 
 import com.ssakura49.sakuratinker.generic.CurioModifier;
-import com.ssakura49.sakuratinker.library.tools.STToolStats;
+import com.ssakura49.sakuratinker.library.tinkering.tools.STToolStats;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;

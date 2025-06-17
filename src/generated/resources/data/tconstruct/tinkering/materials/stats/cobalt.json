@@ -1,0 +1,32 @@
+{
+  "stats": {
+    "sakuratinker:charm_chain": {
+      "armor": 0.1,
+      "arrow_damage": 0.15,
+      "damage": 0.15,
+      "health": 18,
+      "movement_speed": 0.4,
+      "toughness": 0.1
+    },
+    "sakuratinker:charm_core": {},
+    "sakuratinker:energy_unit": {
+      "durability": 0.3,
+      "energy_storage": 50000
+    },
+    "sakuratinker:fox_mask_core": {},
+    "sakuratinker:fox_mask_main": {},
+    "sakuratinker:laser_medium": {
+      "cooldown": 0.6,
+      "range": 15.0
+    },
+    "sakuratinker:phantom_core": {
+      "phantom_amount": 2.0,
+      "range": 16.0
+    },
+    "sakuratinker:spell_cloth": {
+      "cast_time": 0.15,
+      "spell_power": 0.25,
+      "spell_reduce": 0.25
+    }
+  }
+}

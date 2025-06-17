@@ -1,0 +1,10 @@
+{
+  "stats": {
+    "sakuratinker:fox_mask_core": {},
+    "sakuratinker:fox_mask_main": {},
+    "sakuratinker:phantom_core": {
+      "phantom_amount": 1.0,
+      "range": 8.0
+    }
+  }
+}

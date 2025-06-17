@@ -4,6 +4,7 @@ import com.ssakura49.sakuratinker.generic.BaseModifier;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodData;
@@ -29,7 +30,6 @@ public class NetherGhostModifier extends BaseModifier {
             if (source.getEntity() instanceof Player player) {
                 ItemStack weapon = player.getMainHandItem();
                 ToolStack tool = ToolStack.from(weapon);
-
                 int level = tool.getModifierLevel(this.getId());
                 if (level > 0) {
                     FoodData foodData = player.getFoodData();

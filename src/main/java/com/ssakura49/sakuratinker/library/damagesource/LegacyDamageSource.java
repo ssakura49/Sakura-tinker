@@ -1,5 +1,6 @@
 package com.ssakura49.sakuratinker.library.damagesource;
 
+import com.ssakura49.sakuratinker.register.STDamageTypes;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -67,6 +68,23 @@ public class LegacyDamageSource extends DamageSource {
     }
     public static LegacyDamageSource thorns(@NotNull LivingEntity living){
         return new LegacyDamageSource(living.damageSources().thorns(living).typeHolder(),living);
+    }
+    public static LegacyDamageSource projectile(Entity projectile, @Nullable LivingEntity shooter) {
+        LegacyDamageSource source;
+        if (shooter != null) {
+            if (shooter instanceof Player player) {
+                source = new LegacyDamageSource(player.damageSources().playerAttack(player));
+            } else {
+                source = new LegacyDamageSource(shooter.damageSources().mobAttack(shooter));
+            }
+        } else {
+            source = new LegacyDamageSource(projectile.damageSources().generic());
+        }
+        source.setProjectile();
+        return source;
+    }
+    public static LegacyDamageSource overLoad(Entity source) {
+        return new LegacyDamageSource(source.level().registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(STDamageTypes.OVERLOAD_DAMAGE_TYPE), source).setBypassInvulnerableTime();
     }
 
     //对头盔造成额外伤害

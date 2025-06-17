@@ -6,8 +6,8 @@ import com.ssakura49.sakuratinker.library.hooks.armor.WearerDamageTakeHook;
 import com.ssakura49.sakuratinker.library.hooks.armor.WearerKnockBackHook;
 import com.ssakura49.sakuratinker.library.hooks.armor.WearerTakeHealHook;
 import com.ssakura49.sakuratinker.library.logic.context.AttackData;
-import com.ssakura49.sakuratinker.library.tools.STHooks;
-import com.ssakura49.sakuratinker.utils.ToolUtils;
+import com.ssakura49.sakuratinker.library.tinkering.tools.STHooks;
+import com.ssakura49.sakuratinker.utils.tinker.ToolUtil;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -32,7 +32,7 @@ public class ArmorHandler {
             if (context.hasModifiableArmor()) {
                 for(EquipmentSlot slot : ModifiableArmorMaterial.ARMOR_SLOTS) {
                     IToolStackView armor = context.getToolInSlot(slot);
-                    if (ToolUtils.isNotBrokenOrNull(armor)) {
+                    if (ToolUtil.isNotBrokenOrNull(armor)) {
                         armor.getModifierList().forEach((entry) -> {
                             AttackData data = new AttackData(event.getSource(), entity, context, slot);
                             ((WearerDamagePreHook)entry.getHook(STHooks.WEARER_DAMAGE_PRE)).onDamagePre(armor, event, data, entry.getLevel());
@@ -52,7 +52,7 @@ public class ArmorHandler {
         if (context.hasModifiableArmor()) {
             for(EquipmentSlot slot : ModifiableArmorMaterial.ARMOR_SLOTS) {
                 IToolStackView armor = context.getToolInSlot(slot);
-                if (ToolUtils.isNotBrokenOrNull(armor)) {
+                if (ToolUtil.isNotBrokenOrNull(armor)) {
                     armor.getModifierList().forEach((e) -> {
                         AttackData data = new AttackData(event.getSource(), entity, context, slot);
                         ((WearerDamageTakeHook)e.getHook(STHooks.WEARER_DAMAGE_TAKE)).onTakeDamagePre(armor, event, data, e.getLevel());
@@ -70,7 +70,7 @@ public class ArmorHandler {
         if (context.hasModifiableArmor()) {
             for(EquipmentSlot slot : ModifiableArmorMaterial.ARMOR_SLOTS) {
                 IToolStackView armor = context.getToolInSlot(slot);
-                if (ToolUtils.isNotBrokenOrNull(armor)) {
+                if (ToolUtil.isNotBrokenOrNull(armor)) {
                     armor.getModifierList().forEach((e) -> {
                         AttackData data = new AttackData(event.getSource(), entity, context, slot);
                         ((WearerDamageTakeHook)e.getHook(STHooks.WEARER_DAMAGE_TAKE)).onTakeDamagePost(armor, event, data, e.getLevel());
@@ -88,7 +88,7 @@ public class ArmorHandler {
         if (context.hasModifiableArmor()) {
             for(EquipmentSlot slotType : ModifiableArmorMaterial.ARMOR_SLOTS) {
                 IToolStackView armor = context.getToolInSlot(slotType);
-                if (ToolUtils.isNotBrokenOrNull(armor)) {
+                if (ToolUtil.isNotBrokenOrNull(armor)) {
                     armor.getModifierList().forEach((e) -> ((WearerTakeHealHook)e.getHook(STHooks.WEARER_TAKE_HEAL)).onTakeHeal(armor, event, context, e.getLevel()));
                 }
             }
@@ -103,7 +103,7 @@ public class ArmorHandler {
         if (context.hasModifiableArmor()) {
             for(EquipmentSlot slotType : ModifiableArmorMaterial.ARMOR_SLOTS) {
                 IToolStackView armor = context.getToolInSlot(slotType);
-                if (ToolUtils.isNotBrokenOrNull(armor)) {
+                if (ToolUtil.isNotBrokenOrNull(armor)) {
                     armor.getModifierList().forEach((e) -> ((WearerKnockBackHook)e.getHook(STHooks.WEARER_KNOCK_BACK)).onKnockBack(armor, event, context, e.getLevel()));
                 }
             }

@@ -1,0 +1,15 @@
+{
+    "loader" : "tconstruct:tool",
+    "parent" : "forge:item/default-tool",
+    "textures" : {
+      "head" : "sakuratinker:item/tool/tinker_arrow/arrow_head",
+      "shaft" : "sakuratinker:item/tool/tinker_arrow/arrow_shaft",
+      "fletching" : "sakuratinker:item/tool/tinker_arrow/fletching"
+    },
+    "modifier_roots" : [ "sakuratinker:item/tool/tinker_arrow/modifiers/" ],
+    "parts": [
+      { "name": "head",  "index": 0},
+      { "name": "shaft",  "index": 1 },
+      { "name": "fletching",  "index": 2 }
+    ]
+  }

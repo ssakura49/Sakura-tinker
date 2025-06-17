@@ -1,5 +1,6 @@
 {
+  "replace": false,
   "values": [
-    "#sakuratinker:molten_arcane_alloy"
+    "sakuratinker:molten_arcane_alloy"
   ]
 }

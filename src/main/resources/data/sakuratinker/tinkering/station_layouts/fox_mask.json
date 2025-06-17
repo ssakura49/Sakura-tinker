@@ -1,0 +1,37 @@
+{
+  "translation_key": "item.sakuratinker.fox_mask",
+  "icon": {
+    "item": "sakuratinker:fox_mask",
+    "nbt": {
+      "tic_display": true,
+      "tic_materials": [
+        "tconstruct:ui_render#head",
+        "tconstruct:ui_render#handle",
+        "tconstruct:ui_render#extra",
+        "tconstruct:ui_render#large",
+        "tconstruct:ui_render#extra_large"
+      ]
+    }
+  },
+  "sortIndex": 20,
+  "input_slots": [
+    {
+      "icon": "sakuratinker:fox_mask_main",
+      "translation_key": "item.sakuratinker.fox_mask_main",
+      "x": 35,
+      "y": 54,
+      "filter": {
+        "item": "sakuratinker:fox_mask_main"
+      }
+    },
+    {
+      "icon": "sakuratinker:fox_mask_core",
+      "translation_key": "item.sakuratinker.fox_mask_core",
+      "x": 35,
+      "y": 34,
+      "filter": {
+        "item": "sakuratinker:fox_mask_core"
+      }
+    }
+  ]
+}

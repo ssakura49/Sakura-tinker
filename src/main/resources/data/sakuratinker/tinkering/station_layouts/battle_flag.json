@@ -1,0 +1,55 @@
+{
+  "translation_key": "item.sakuratinker.battle_flag",
+  "icon": {
+    "item": "sakuratinker:battle_flag",
+    "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+  },
+  "sortIndex": 10,
+  "input_slots": [
+    {
+      "icon": "tconstruct:small_blade",
+      "translation_key": "item.tconstruct.small_blade",
+      "x": 60,
+      "y": 20,
+      "filter": {
+        "item": "tconstruct:small_blade"
+      }
+    },
+    {
+      "icon": "sakuratinker:flag",
+      "translation_key": "item.sakuratinker.flag",
+      "x": 40,
+      "y": 20,
+      "filter": {
+        "item": "sakuratinker:flag"
+      }
+    },
+    {
+      "icon": "sakuratinker:flag",
+      "translation_key": "item.sakuratinker.flag",
+      "x": 60,
+      "y": 40,
+      "filter": {
+        "item": "sakuratinker:flag"
+      }
+    },
+    {
+      "icon": "tconstruct:tough_handle",
+      "translation_key": "item.tconstruct.tough_handle",
+      "x": 40,
+      "y": 40,
+      "filter": {
+        "item": "tconstruct:tough_handle"
+      }
+    },
+    {
+      "icon": "tconstruct:tough_handle",
+      "translation_key": "item.tconstruct.tough_handle",
+      "x": 20,
+      "y": 60,
+      "filter": {
+        "item": "tconstruct:tough_handle"
+      }
+    }
+  ]
+}

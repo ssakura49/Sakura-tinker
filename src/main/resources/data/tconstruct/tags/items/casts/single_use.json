@@ -1,12 +1,23 @@
 {
   "replace": false,
   "values": [
-    "#sakuratinker:casts/single_use/charm_chain",
-    "#sakuratinker:casts/single_use/charm_core",
-    "#sakuratinker:casts/single_use/swift_blade",
-    "#sakuratinker:casts/single_use/swift_guard",
-    "#sakuratinker:casts/single_use/barrel",
-    "#sakuratinker:casts/single_use/battery_cell",
-    "#sakuratinker:casts/single_use/laser_medium"
+    "#tconstruct:casts/single_use/charm_chain",
+    "#tconstruct:casts/single_use/charm_core",
+    "#tconstruct:casts/single_use/swift_blade",
+    "#tconstruct:casts/single_use/swift_guard",
+    "#tconstruct:casts/single_use/barrel",
+    "#tconstruct:casts/single_use/energy_unit",
+    "#tconstruct:casts/single_use/laser_medium",
+    "#tconstruct:casts/single_use/blade",
+    "#tconstruct:casts/single_use/arrow_head",
+    "#tconstruct:casts/single_use/arrow_shaft",
+    "#tconstruct:casts/single_use/book_cover",
+    "#tconstruct:casts/single_use/spell_cloth",
+    "#tconstruct:casts/single_use/great_blade",
+    "#tconstruct:casts/single_use/shell",
+    "#tconstruct:casts/single_use/flag",
+    "#tconstruct:casts/single_use/fox_mask_main",
+    "#tconstruct:casts/single_use/fox_mask_core",
+    "#tconstruct:casts/single_use/phantom_core"
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "stats": {
+    "sakuratinker:charm_chain": {
+      "armor": 0.05,
+      "arrow_damage": 0.0,
+      "damage": 0.05,
+      "health": 8,
+      "movement_speed": 0.02,
+      "toughness": 0.03
+    },
+    "sakuratinker:charm_core": {},
+    "sakuratinker:fox_mask_core": {},
+    "sakuratinker:fox_mask_main": {},
+    "sakuratinker:phantom_core": {
+      "phantom_amount": 1.0,
+      "range": 8.0
+    }
+  }
+}

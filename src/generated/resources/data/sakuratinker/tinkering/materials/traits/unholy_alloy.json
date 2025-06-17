@@ -1,0 +1,20 @@
+{
+  "default": [
+    {
+      "level": 2,
+      "name": "sakuratinker:devour_soul"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:soul_intake"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:exceptionally_talented"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:soul_erosion"
+    }
+  ]
+}

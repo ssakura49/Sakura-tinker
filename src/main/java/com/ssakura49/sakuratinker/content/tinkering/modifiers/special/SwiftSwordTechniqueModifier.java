@@ -17,6 +17,6 @@ public class SwiftSwordTechniqueModifier extends BaseModifier {
     }
     @Override
     public LegacyDamageSource modifyDamageSource(IToolStackView tool, ModifierEntry entry, LivingEntity attacker, InteractionHand hand, Entity target, EquipmentSlot sourceSlot, boolean isFullyCharged, boolean isExtraAttack, boolean isCritical, LegacyDamageSource source) {
-        return PercentageBypassArmorSource.Any(source.typeHolder(),attacker,attacker,1);
+        return PercentageBypassArmorSource.Any(source.typeHolder(),target,attacker,1);
     }
 }

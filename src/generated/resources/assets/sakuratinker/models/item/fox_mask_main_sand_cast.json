@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "sakuratinker:item/cast/fox_mask_main_sand_cast"
+  }
+}

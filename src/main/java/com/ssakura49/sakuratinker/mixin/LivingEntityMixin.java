@@ -1,7 +1,7 @@
 package com.ssakura49.sakuratinker.mixin;
 
 import com.ssakura49.sakuratinker.library.damagesource.PercentageBypassArmorSource;
-import com.ssakura49.sakuratinker.utils.MixinTemp;
+import com.ssakura49.sakuratinker.MixinTemp;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;

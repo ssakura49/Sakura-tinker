@@ -1,0 +1,46 @@
+{
+    "translation_key": "item.sakuratinker.first_fractal",
+    "icon": {
+      "item": "sakuratinker:first_fractal",
+      "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+    },
+    "sortIndex": 8,
+    "input_slots": [
+      {
+          "filter": {
+            "item": "sakuratinker:great_blade"
+          },
+          "icon": "sakuratinker:great_blade",
+          "translation_key": "item.sakuratinker.great_blade",
+          "x": 45,
+          "y": 25
+      },
+      {
+          "filter": {
+            "item": "sakuratinker:phantom_core"
+          },
+          "icon": "sakuratinker:phantom_core",
+          "translation_key": "item.sakuratinker.phantom_core",
+          "x": 25,
+          "y": 25
+      },
+      {
+          "filter": {
+            "item": "tconstruct:tough_binding"
+          },
+          "icon": "tconstruct:tough_binding",
+          "translation_key": "item.tconstruct.tough_binding",
+          "x": 25,
+          "y": 45
+      },
+      {
+          "filter": {
+            "item": "tconstruct:tough_handle"
+          },
+          "icon": "tconstruct:tough_handle",
+          "translation_key": "item.tconstruct.tough_handle",
+          "x": 5,
+          "y": 65
+      }
+    ]
+  }

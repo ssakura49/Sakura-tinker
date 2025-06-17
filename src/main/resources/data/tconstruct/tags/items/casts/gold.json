@@ -1,12 +1,23 @@
 {
-  "replace": false,
   "values": [
     "sakuratinker:charm_chain_cast",
     "sakuratinker:charm_core_cast",
     "sakuratinker:swift_blade_cast",
     "sakuratinker:swift_guard_cast",
     "sakuratinker:barrel_cast",
-    "sakuratinker:battery_cell_cast",
-    "sakuratinker:laser_medium_cast"
+    "sakuratinker:energy_unit_cast",
+    "sakuratinker:laser_medium_cast",
+    "sakuratinker:blade_cast",
+    "sakuratinker:blade_sand_cast",
+    "sakuratinker:arrow_head_cast",
+    "sakuratinker:arrow_shaft_cast",
+    "sakuratinker:great_blade_cast",
+    "sakuratinker:shell_cast",
+    "sakuratinker:flag_cast",
+    "sakuratinker:fox_mask_main_cast",
+    "sakuratinker:fox_mask_core_cast",
+    { "id": "sakuratinker:phantom_core_cast", "required":false},
+    {"id" : "sakuratinker:book_cover_cast", "required":false},
+    {"id" : "sakuratinker:spell_cloth_cast", "required":false}
   ]
 }

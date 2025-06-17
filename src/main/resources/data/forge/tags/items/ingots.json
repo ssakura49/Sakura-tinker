@@ -5,6 +5,12 @@
       "#forge:ingots/youkai",
       "#forge:ingots/nihilite",
       "#forge:ingots/eezo",
-      "#forge:ingots/arcane_alloy"
+      "#forge:ingots/arcane_alloy",
+      "#forge:ingots/colorful",
+      "#forge:ingots/blood_bound_steel",
+      "#forge:ingots/steady_alloy",
+      "#forge:ingots/prometheum",
+      "#forge:ingots/orichalcum",
+      "#forge:ingots/aurumos"
     ]
 }

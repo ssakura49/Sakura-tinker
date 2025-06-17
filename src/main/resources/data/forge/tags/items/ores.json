@@ -1,7 +1,9 @@
 {
   "replace": false,
     "values": [
-      "#forge:ores/nihilite",
-      "#forge:ores/eezo"
+      "#forge:ores/terracryst",
+      "#forge:ores/eezo",
+      "#forge:ores/prometheum",
+      "#forge:ores/orichalcum"
     ]
 }

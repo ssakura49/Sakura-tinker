@@ -1,0 +1,17 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "cover": "sakuratinker:item/tool/tinker_spell_book/book_cover",
+    "binding": "sakuratinker:item/tool/tinker_spell_book/binding",
+    "cloth": "sakuratinker:item/tool/tinker_spell_book/spell_cloth"
+  },
+  "modifier_roots": [
+    "sakuratinker:item/tool/tinker_spell_book/modifiers/"
+  ],
+  "parts": [
+    { "name": "cover", "index": 0 },
+    { "name": "binding", "index": 2 },
+    { "name": "cloth", "index": 1 }
+  ]
+}

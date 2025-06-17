@@ -1,10 +1,9 @@
 package com.ssakura49.sakuratinker.content.tools.item;
 
 import com.ssakura49.sakuratinker.content.entity.CelestialBladeProjectile;
-import com.ssakura49.sakuratinker.content.tools.definition.ToolDefinitions;
-import com.ssakura49.sakuratinker.library.tools.STToolStats;
+import com.ssakura49.sakuratinker.library.tinkering.tools.STToolStats;
 import com.ssakura49.sakuratinker.register.STSounds;
-import com.ssakura49.sakuratinker.utils.TooltipUtils;
+import com.ssakura49.sakuratinker.utils.tinker.TooltipUtil;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -97,8 +96,8 @@ public class BladeConvergence extends ModifiableItem {
         builder.addDurability();
         builder.add(ToolStats.ATTACK_DAMAGE);
         builder.add(ToolStats.ATTACK_SPEED);
-        TooltipUtils.addToolStatTooltip(builder, tool, STToolStats.COOLDOWN);
-        TooltipUtils.addToolStatTooltip(builder, tool, STToolStats.RANGE);
+        TooltipUtil.addToolStatTooltip(builder, tool, STToolStats.COOLDOWN);
+        TooltipUtil.addToolStatTooltip(builder, tool, STToolStats.RANGE);
         builder.addAllFreeSlots();
 
         for(ModifierEntry entry : tool.getModifierList()) {

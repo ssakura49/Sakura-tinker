@@ -62,7 +62,6 @@ public class BreakLogicHelper {
         if (removed) {
             state.getBlock().destroy(world, pos, state);
         }
-
         return removed;
     }
 

@@ -4,6 +4,8 @@
     "sakuratinker:great_sword",
     "sakuratinker:swift_sword",
     "sakuratinker:vampire_knife",
-    "sakuratinker:blade_convergence"
+    "sakuratinker:blade_convergence",
+    "sakuratinker:battle_flag",
+    { "id": "sakuratinker:first_fractal", "required":false}
   ]
 }

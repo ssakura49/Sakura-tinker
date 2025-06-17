@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "sakuratinker:mana_steal",
+  "temperature": 1000,
+  "result": {
+    "fluid": "sakuratinker:molten_mana_steal",
+    "amount": 90
+  }
+}

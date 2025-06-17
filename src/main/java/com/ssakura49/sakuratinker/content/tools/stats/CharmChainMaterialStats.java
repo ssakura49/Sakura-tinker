@@ -3,7 +3,7 @@ package com.ssakura49.sakuratinker.content.tools.stats;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.ssakura49.sakuratinker.SakuraTinker;
-import com.ssakura49.sakuratinker.library.tools.STToolStats;
+import com.ssakura49.sakuratinker.library.tinkering.tools.STToolStats;
 import net.minecraft.network.chat.Component;
 import slimeknights.mantle.data.loadable.primitive.FloatLoadable;
 import slimeknights.mantle.data.loadable.primitive.IntLoadable;
@@ -101,7 +101,7 @@ public record CharmChainMaterialStats(float movement_speed, int health, float ar
                 IntLoadable.FROM_ZERO.defaultField("health", 0, true, CharmChainMaterialStats::health),
                 FloatLoadable.ANY.defaultField("armor", 0.0F, true, CharmChainMaterialStats::armor),
                 FloatLoadable.ANY.defaultField("toughness", 0.0F, true, CharmChainMaterialStats::toughness),
-                FloatLoadable.ANY.defaultField("attack", 0.0F, true, CharmChainMaterialStats::damage),
+                FloatLoadable.ANY.defaultField("damage", 0.0F, true, CharmChainMaterialStats::damage),
                 FloatLoadable.ANY.defaultField("arrow_damage", 0.0F, true, CharmChainMaterialStats::arrow_damage), CharmChainMaterialStats::new));
         SPEED_BONUS_PREFIX = IMaterialStats.makeTooltipKey(SakuraTinker.location("movement_speed"));
         HEALTH_BONUS_PREFIX = IMaterialStats.makeTooltipKey(SakuraTinker.location("health"));
@@ -114,7 +114,7 @@ public record CharmChainMaterialStats(float movement_speed, int health, float ar
                 IMaterialStats.makeTooltip(SakuraTinker.location("health.description")),
                 IMaterialStats.makeTooltip(SakuraTinker.location("armor.description")),
                 IMaterialStats.makeTooltip(SakuraTinker.location("armor_toughness.description")),
-                IMaterialStats.makeTooltip(SakuraTinker.location("attack.description")),
+                IMaterialStats.makeTooltip(SakuraTinker.location("damage.description")),
                 IMaterialStats.makeTooltip(SakuraTinker.location("arrow_damage.description"))
         );
     }

@@ -12,7 +12,7 @@ import java.util.Collection;
 
 public interface CurioCombatHook {
     //攻击者对目标造成伤害之前触发
-    default void onCurioToDamagePre(IToolStackView curio, LivingHurtEvent event, LivingEntity attacker, LivingEntity target, int level) {
+    default void onDamageTargetPre(IToolStackView curio, LivingHurtEvent event, LivingEntity attacker, LivingEntity target, int level) {
     }
     //计算伤害时触发
     default void onCurioCalculateDamage(IToolStackView curio, LivingCalculateAbsEvent event, LivingEntity attacker, LivingEntity target, int level) {
@@ -35,9 +35,9 @@ public interface CurioCombatHook {
             this.modules = modules;
         }
 
-        public void onCurioToDamagePre(IToolStackView curio, LivingHurtEvent event, LivingEntity attacker, LivingEntity target, int level) {
+        public void onDamageTargetPre(IToolStackView curio, LivingHurtEvent event, LivingEntity attacker, LivingEntity target, int level) {
             for(CurioCombatHook module : this.modules) {
-                module.onCurioToDamagePre(curio, event, attacker, target, level);
+                module.onDamageTargetPre(curio, event, attacker, target, level);
             }
 
         }

@@ -1,6 +1,7 @@
 package com.ssakura49.sakuratinker.compat.YoukaiHomeComing.modifiers;
 
 import com.ssakura49.sakuratinker.generic.BaseModifier;
+import com.ssakura49.sakuratinker.utils.tinker.ToolUtil;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -16,6 +17,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 
 public class YoukaifiedModifier extends BaseModifier {
+    private static final int MAX_RESISTANCE_LEVEL = 3;
     public static MobEffect getYoukaifiedEffect() {
         ResourceLocation effectId = new ResourceLocation("youkaishomecoming", "youkaified");
         return ForgeRegistries.MOB_EFFECTS.getValue(effectId);
@@ -32,6 +34,10 @@ public class YoukaifiedModifier extends BaseModifier {
         if (isArmorSlot(context)) {
             updateEffects(context.getEntity(), false);
         }
+    }
+
+    private int calculateTotalLevel(Player player) {
+         return ToolUtil.getSingleModifierArmorAllLevel(player, this);
     }
 
     private boolean isArmorSlot(EquipmentChangeContext context) {
@@ -52,19 +58,20 @@ public class YoukaifiedModifier extends BaseModifier {
             }
         }
     }
-    private int calculateTotalLevel(Player player) {
-        int totalLevel = 0;
-        for (ItemStack armor : player.getArmorSlots()) {
-            IToolStackView armorTool = ToolStack.from(armor);
-            totalLevel += armorTool.getModifiers().getLevel(this.getId());
-        }
-        return totalLevel;
-    }
     private void applyEffects(Player player, int totalLevel) {
-        int effectLevel = Math.max(1, totalLevel / 2);
-        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, Integer.MAX_VALUE, effectLevel - 2, false, false, true));
-        player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, Integer.MAX_VALUE, effectLevel - 1, false, false, true));
-    }
+        int effectLevel = Math.min(Math.max(1, totalLevel / 2), MAX_RESISTANCE_LEVEL);
+        player.addEffect(new MobEffectInstance(
+                MobEffects.DAMAGE_RESISTANCE,
+                Integer.MAX_VALUE,
+                effectLevel - 1, // 调整等级计算（例如：totalLevel=3 → effectLevel=1）
+                false, false, true
+        ));
+        player.addEffect(new MobEffectInstance(
+                MobEffects.ABSORPTION,
+                Integer.MAX_VALUE,
+                effectLevel - 1,
+                false, false, true
+        ));   }
     private void removeEffects(Player player) {
         player.removeEffect(MobEffects.DAMAGE_RESISTANCE);
         player.removeEffect(MobEffects.ABSORPTION);

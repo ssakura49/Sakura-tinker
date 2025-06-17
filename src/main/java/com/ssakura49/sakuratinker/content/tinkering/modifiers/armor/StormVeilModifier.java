@@ -38,7 +38,7 @@ public class StormVeilModifier extends BaseModifier {
         boolean canTrigger = (currentTime - lastHurtTime >= 600) && (currentTime - lastTriggerTime >= 600);
 
         if (canTrigger) {
-            player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 3, false, false, true));
+            player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 180, 4, false, false, true));
             player.getPersistentData().putLong("LastStormVeilTrigger", currentTime);
         }
     }

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "discard_chance_on_air_exposure": 0.0,
+    "size": 6,
+    "targets": [
+      {
+        "state": {
+          "Name": "sakuratinker:orichalcum_ore"
+        },
+        "target": {
+          "block": "minecraft:stone",
+          "predicate_type": "minecraft:block_match"
+        }
+      },{
+        "state": {
+          "Name": "sakuratinker:orichalcum_ore_deepslate"
+        },
+        "target": {
+          "block": "minecraft:deepslate",
+          "predicate_type": "minecraft:block_match"
+        }
+      }
+    ]
+  }
+}

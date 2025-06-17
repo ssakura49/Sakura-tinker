@@ -1,7 +1,7 @@
 package com.ssakura49.sakuratinker.library.logic.context;
 
 import com.ssakura49.sakuratinker.library.logic.helper.AttackLogicHelper;
-import com.ssakura49.sakuratinker.utils.EntityUtils;
+import com.ssakura49.sakuratinker.utils.entity.EntityUtil;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
@@ -75,7 +75,7 @@ public record AttackData(DamageSource source, LivingEntity entity, EquipmentCont
 
     public boolean isFullAttack() {
         Player player = this.getPlayerAttack();
-        return player == null || EntityUtils.isFullChance(player);
+        return player == null || EntityUtil.isFullChance(player);
     }
 
     public boolean isCritical() {

@@ -36,7 +36,6 @@ public class PainResonanceModifier extends BaseModifier {
             MobEffects.HUNGER,
             MobEffects.DARKNESS,
             STEffects.TORTURE.get()
-
     };
 
     @Override

@@ -6,6 +6,17 @@
     "sakuratinker:swift_sword",
     "sakuratinker:vampire_knife",
     "sakuratinker:blade_convergence",
-    "sakuratinker:laser_gun"
+    "sakuratinker:laser_gun",
+    "sakuratinker:shuriken",
+    "sakuratinker:tinker_arrow",
+    { "id": "sakuratinker:tinker_spell_book", "required":false},
+    "sakuratinker:embedded_helmet",
+    "sakuratinker:embedded_chestplate",
+    "sakuratinker:embedded_leggings",
+    "sakuratinker:embedded_boots",
+    "sakuratinker:grappling_hook",
+    "sakuratinker:power_bank",
+    "sakuratinker:battle_flag",
+    { "id": "sakuratinker:first_fractal", "required":false}
   ]
 }

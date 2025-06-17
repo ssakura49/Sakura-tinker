@@ -17,7 +17,7 @@ license="${mod_license}"
 # The modid of the mod
 modId="sakuratinker" #mandatory
 # The version number of the mod
-version="${mod_version}" #mandatory
+version="1.2.9" #mandatory
 # A display name for the mod
 displayName="Sakura Tinker" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
@@ -77,7 +77,7 @@ description='''A Simple TConstruct Addon'''
 [[dependencies.sakuratinker]]
     modId="etstlib"
     mandatory=true
-    versionRange="[3.0.0-beta.1,)"
+    versionRange="[3.0.0-beta.6fix,)"
     ordering="AFTER"
     side="BOTH"
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sakuratinker:item/cast/arrow_head_red_sand_cast"
+  }
+}

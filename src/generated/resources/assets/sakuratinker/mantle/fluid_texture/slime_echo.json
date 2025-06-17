@@ -1,0 +1,5 @@
+{
+  "color": "FFFFFFFF",
+  "flowing": "sakuratinker:block/fluid/slime_echo/flowing",
+  "still": "sakuratinker:block/fluid/slime_echo/still"
+}

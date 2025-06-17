@@ -1,0 +1,16 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "sakuratinker:dissloving"
+    }
+  ],
+  "perStat": {
+    "sakuratinker:charm": [
+      {
+        "level": 1,
+        "name": "sakuratinker:high_frequency_barrier"
+      }
+    ]
+  }
+}

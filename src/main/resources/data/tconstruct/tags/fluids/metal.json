@@ -1,14 +1,27 @@
 {
   "replace": false,
   "values": [
-    "tinkers_ingenuity:molten_arcane_alloy",
-    "tinkers_ingenuity:molten_arcane_salvage",
-    "tinkers_ingenuity:molten_eezo",
-    "tinkers_ingenuity:molten_etherium",
-    "tinkers_ingenuity:molten_fiery_crystal",
-    "tinkers_ingenuity:molten_infinity",
-    "tinkers_ingenuity:molten_nihilite",
-    "tinkers_ingenuity:molten_soul_sakura",
-    "tinkers_ingenuity:molten_youkai"
+    "sakuratinker:molten_arcane_alloy",
+    "sakuratinker:molten_arcane_salvage",
+    "sakuratinker:molten_eezo",
+    "sakuratinker:molten_etherium",
+    "sakuratinker:molten_fiery_crystal",
+    "sakuratinker:molten_infinity",
+    "sakuratinker:molten_nihilite",
+    "sakuratinker:molten_soul_sakura",
+    "sakuratinker:molten_youkai",
+    "sakuratinker:molten_neutron",
+    "sakuratinker:molten_colorful",
+    "sakuratinker:molten_crystal_matrix",
+    "sakuratinker:molten_blood_bound_steel",
+    "sakuratinker:molten_dragon_fire_steel",
+    "sakuratinker:molten_dragon_ice_steel",
+    "sakuratinker:molten_dragon_lightning_steel",
+    "sakuratinker:molten_steady_alloy",
+    "sakuratinker:molten_south_star",
+    "sakuratinker:molten_terracryst",
+    "sakuratinker:molten_prometheum",
+    "sakuratinker:molten_orichalcum",
+    "sakuratinker:molten_aurumos"
   ]
 }

@@ -2,6 +2,7 @@ package com.ssakura49.sakuratinker.compat.EnigmaticLegacy.spellstone;
 
 import com.ssakura49.sakuratinker.generic.BaseModifier;
 import com.ssakura49.sakuratinker.library.logic.context.AttackData;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -10,6 +11,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.tools.context.EquipmentChangeContext;
+import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
 import java.util.Arrays;
@@ -44,21 +46,21 @@ public class GolemHeartModifier extends BaseModifier {
     }
 
     @Override
-    public float onModifyTakeDamage(IToolStackView armor, AttackData data, int level, float amount) {
-        LivingEntity entity = data.entity();
+    public float onModifyTakeDamage(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
+        LivingEntity entity = context.getEntity();
         double totalArmor = entity.getArmorValue();
         boolean hasLowArmor = totalArmor < 10;
         boolean wearingMultipleArmor = countWornArmor(entity) > 1;
-        if (data.source().is(DamageTypes.MAGIC)) {
+        if (source.is(DamageTypes.MAGIC)) {
             return wearingMultipleArmor ? amount * 3.0f : amount * 1.25f;
         }
-        else if (data.source().is(DamageTypes.MOB_ATTACK) || data.source().is(DamageTypes.PLAYER_ATTACK)) {
+        else if (source.is(DamageTypes.MOB_ATTACK) || source.is(DamageTypes.PLAYER_ATTACK)) {
             return amount * 0.75f;
         }
-        else if (data.source().is(DamageTypes.EXPLOSION)) {
+        else if (source.is(DamageTypes.EXPLOSION)) {
             return hasLowArmor ? amount * 0.6f : amount;
         }
-        else if (data.source().is(DamageTypes.FALLING_ANVIL) || data.source().is(DamageTypes.FALLING_BLOCK) || data.source().is(DamageTypes.CACTUS)) {
+        else if (source.is(DamageTypes.FALLING_ANVIL) || source.is(DamageTypes.FALLING_BLOCK) || source.is(DamageTypes.CACTUS)) {
             return 0;
         }
 

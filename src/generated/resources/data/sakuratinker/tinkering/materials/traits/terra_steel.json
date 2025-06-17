@@ -1,0 +1,28 @@
+{
+  "default": [
+    {
+      "level": 2,
+      "name": "etstlib:mana_repair"
+    },
+    {
+      "level": 2,
+      "name": "sakuratinker:mana_ray"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 2,
+        "name": "etstlib:mana_repair"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:terra_magical"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:natural_will"
+      }
+    ]
+  }
+}

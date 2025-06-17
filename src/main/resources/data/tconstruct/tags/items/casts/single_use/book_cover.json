@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id" : "sakuratinker:book_cover_sand_cast", "required":false},
+    {"id" : "sakuratinker:book_cover_red_sand_cast", "required":false}
+  ]
+}

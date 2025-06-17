@@ -1,0 +1,13 @@
+{
+  "stats": {
+    "sakuratinker:charm_chain": {
+      "armor": 0.0,
+      "arrow_damage": 0.05,
+      "damage": 0.05,
+      "health": 8,
+      "movement_speed": -0.1,
+      "toughness": 0.0
+    },
+    "sakuratinker:charm_core": {}
+  }
+}

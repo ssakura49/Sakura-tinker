@@ -1,7 +1,7 @@
 package com.ssakura49.sakuratinker.content.tinkering.modifiers.misc;
 
 import com.ssakura49.sakuratinker.generic.BaseModifier;
-import com.ssakura49.sakuratinker.utils.EntityUtils;
+import com.ssakura49.sakuratinker.utils.entity.EntityUtil;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -19,11 +19,11 @@ public class ThunderModifier extends BaseModifier {
 
     @Override
     public void onAfterMeleeHit(IToolStackView tool, int level, ToolAttackContext context, LivingEntity attacker, LivingEntity target, float damageDealt) {
-        EntityUtils.spawnThunder(target);
+        EntityUtil.spawnThunder(target);
     }
 
     @Override
     public void onProjectileHitTarget(ModifierNBT modifiers, ModDataNBT persistentData, int level, Projectile projectile, AbstractArrow arrow, EntityHitResult hit, LivingEntity attacker, LivingEntity target) {
-        EntityUtils.spawnThunder(target);
+        EntityUtil.spawnThunder(target);
     }
 }

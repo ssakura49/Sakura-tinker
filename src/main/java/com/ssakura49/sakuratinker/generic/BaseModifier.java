@@ -8,7 +8,7 @@ import com.ssakura49.sakuratinker.library.hooks.click.ItemClickUsedHook;
 import com.ssakura49.sakuratinker.library.hooks.click.LeftClickModifierHook;
 import com.ssakura49.sakuratinker.library.hooks.combat.*;
 import com.ssakura49.sakuratinker.library.logic.context.AttackData;
-import com.ssakura49.sakuratinker.library.tools.STHooks;
+import com.ssakura49.sakuratinker.library.tinkering.tools.STHooks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -33,6 +33,7 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import org.jetbrains.annotations.NotNull;
@@ -49,9 +50,11 @@ import slimeknights.tconstruct.library.modifiers.hook.behavior.ProcessLootModifi
 import slimeknights.tconstruct.library.modifiers.hook.behavior.ToolDamageModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.build.ModifierRemovalHook;
 import slimeknights.tconstruct.library.modifiers.hook.build.ToolStatsModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.build.ValidateModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.combat.DamageDealtModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeDamageModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.combat.MeleeHitModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.display.RequirementsModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.display.TooltipModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.EntityInteractionModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.InteractionSource;
@@ -98,6 +101,8 @@ public abstract class BaseModifier extends Modifier implements
         ToolDamageModifierHook,
         KeybindInteractModifierHook,
         TooltipModifierHook,
+        RequirementsModifierHook,
+        ValidateModifierHook,
 
         LeftClickModifierHook,
         ModifyDamageSourceModifierHook,
@@ -133,6 +138,7 @@ public abstract class BaseModifier extends Modifier implements
                 ModifierHooks.TOOL_STATS,
                 ModifierHooks.ARMOR_INTERACT,
                 ModifierHooks.TOOL_DAMAGE,
+                ModifierHooks.REQUIREMENTS,
                 STHooks.LEFT_CLICK,
                 STHooks.MODIFY_DAMAGE_SOURCE,
                 STHooks.WEARER_DAMAGE_PRE,
@@ -182,9 +188,9 @@ public abstract class BaseModifier extends Modifier implements
      */
     @Override
     public float getMeleeDamage(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float baseDamage, float damage) {
-        return !context.getAttacker().level().isClientSide() && context.getLivingTarget() != null ? this.onModifyMeleeDamage(tool, modifier.getLevel(), context, context.getAttacker(), context.getLivingTarget(), baseDamage, damage) : damage;
+        return !context.getAttacker().level().isClientSide() && context.getLivingTarget() != null ? this.onModifyMeleeDamage(tool, modifier, context, context.getAttacker(), context.getLivingTarget(), baseDamage, damage) : damage;
     }
-    public float onModifyMeleeDamage(IToolStackView tool, int level, ToolAttackContext context, LivingEntity attacker, LivingEntity target, float baseDamage, float actualDamage) {
+    public float onModifyMeleeDamage(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, LivingEntity attacker, LivingEntity target, float baseDamage, float actualDamage) {
         return actualDamage;
     }
     /**
@@ -194,10 +200,10 @@ public abstract class BaseModifier extends Modifier implements
     @Override
     public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
         if (!context.getAttacker().level().isClientSide() && context.getLivingTarget() != null) {
-            this.onAfterMeleeHit(tool, modifier.getLevel(), context, context.getAttacker(), context.getLivingTarget(), damageDealt);
+            this.onAfterMeleeHit(tool, modifier, context, context.getAttacker(), context.getLivingTarget(), damageDealt);
         }
     }
-    public void onAfterMeleeHit(IToolStackView tool, int level, ToolAttackContext context, LivingEntity attacker, LivingEntity target, float damageDealt) {
+    public void onAfterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, LivingEntity attacker, LivingEntity target, float damageDealt) {
     }
     /**
      * @MeleeHitModifierHook
@@ -285,10 +291,10 @@ public abstract class BaseModifier extends Modifier implements
     @Override
     public void onProjectileLaunch(IToolStackView tool, ModifierEntry modifier, LivingEntity shooter, Projectile projectile, @Nullable AbstractArrow arrow, ModDataNBT modDataNBT, boolean primary) {
         if (arrow != null) {
-            this.onProjectileShoot(tool, modifier.getLevel(), shooter, projectile, arrow, modDataNBT, primary);
+            this.onProjectileShoot(tool, modifier, shooter, projectile, arrow, modDataNBT, primary);
         }
     }
-    public void onProjectileShoot(IToolStackView bow, int level, LivingEntity shooter, Projectile projectile, AbstractArrow arrow, ModDataNBT modDataNBT, boolean primary) {
+    public void onProjectileShoot(IToolStackView bow,ModifierEntry modifier, LivingEntity shooter, Projectile projectile, AbstractArrow arrow, ModDataNBT modDataNBT, boolean primary) {
     }
     /**
      * @EquipmentChangeModifierHook
@@ -333,9 +339,9 @@ public abstract class BaseModifier extends Modifier implements
      */
     @Override
     public float modifyDamageTaken(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
-        return this.onModifyTakeDamage(tool, new AttackData(source, context.getEntity(), context, slotType), modifier.getLevel(), amount);
+        return this.onModifyTakeDamage(tool, modifier, context, slotType, source, amount, isDirectDamage);
     }
-    public float onModifyTakeDamage(IToolStackView armor, AttackData data, int level, float amount) {
+    public float onModifyTakeDamage(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
         return amount;
     }
     /**
@@ -348,6 +354,9 @@ public abstract class BaseModifier extends Modifier implements
         return null;
     }
     public void onModifierRemoved(IToolStackView tool) {
+    }
+    public Component getDisplayName(IToolStackView tool, ModifierEntry entry) {
+        return entry.getDisplayName();
     }
     /**
      *
@@ -437,4 +446,41 @@ public abstract class BaseModifier extends Modifier implements
     public int modifierDamageTool(IToolStackView tool, ModifierEntry modifier, int amount, @Nullable LivingEntity holder) {
         return amount;
     }
+    /**
+     *
+     */
+    @Override
+    public void onTakeDamagePre(IToolStackView armor, LivingHurtEvent event, AttackData data, int level) {
+        this.modifierTakeDamagePre(armor, event , data, level);
+    }
+    public void modifierTakeDamagePre(IToolStackView armor, LivingHurtEvent event, AttackData data, int level) {
+    }
+    /**
+    *
+     */
+    @Override
+    public void onKillLivingTarget(IToolStackView tool, LivingDeathEvent event, LivingEntity attacker, LivingEntity target, int level) {
+        this.modifierKillLivingTarget(tool, event, attacker, target, level);
+    }
+    public void modifierKillLivingTarget(IToolStackView tool, LivingDeathEvent event, LivingEntity attacker, LivingEntity target, int level) {}
+    /**
+     *
+     */
+    @Override
+    public List<ModifierEntry> displayModifiers(ModifierEntry entry) {
+        return List.of();
+    }
+
+    @Nullable
+    @Override
+    public Component requirementsError(ModifierEntry entry) {
+        return null;
+    }
+    /**
+     *
+     */
+    @Nullable
+    public Component validate(IToolStackView var1, ModifierEntry var2){
+        return null;
+    };
 }

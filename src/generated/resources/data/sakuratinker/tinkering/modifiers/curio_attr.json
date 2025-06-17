@@ -1,0 +1,17 @@
+{
+  "level_display": "tconstruct:default",
+  "modules": [
+    {
+      "type": "sakuratinker:multi_curio_attribute",
+      "attributes": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "operation": "addition",
+          "value": 10.0
+        }
+      ],
+      "name": "sakuratinker:curio_attr"
+    }
+  ],
+  "tooltip_display": "always"
+}

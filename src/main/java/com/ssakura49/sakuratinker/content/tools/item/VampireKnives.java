@@ -1,9 +1,8 @@
 package com.ssakura49.sakuratinker.content.tools.item;
 
 import com.ssakura49.sakuratinker.content.entity.GhostKnife;
-import com.ssakura49.sakuratinker.content.tools.definition.ToolDefinitions;
-import com.ssakura49.sakuratinker.library.tools.STToolStats;
-import com.ssakura49.sakuratinker.utils.TooltipUtils;
+import com.ssakura49.sakuratinker.library.tinkering.tools.STToolStats;
+import com.ssakura49.sakuratinker.utils.tinker.TooltipUtil;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -46,13 +45,10 @@ public class VampireKnives extends ModifiableItem {
     public VampireKnives(Properties properties, ToolDefinition toolDefinition) {
         super(properties, toolDefinition);
     }
-//    @Override
-//    public int getUseDuration(ItemStack stack) {
-//        return 120; // 最大使用持续时间
-//    }
+
     @Override
     public UseAnim getUseAnimation(ItemStack stack) {
-        return UseAnim.NONE; // 使用长矛的动画
+        return UseAnim.NONE;
     }
 
     @Override
@@ -71,22 +67,19 @@ public class VampireKnives extends ModifiableItem {
                 tool.getStats().get(STToolStats.COOLDOWN) * 30.0F / speed
         );
 
-        // 计算基础伤害
         float baseDamage = ToolAttackUtil.getAttributeAttackDamage(
                 tool,
                 player,
                 hand == InteractionHand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND
         );
 
-        // 发射主飞刀
         GhostKnife mainKnife = createKnife(level, player, baseDamage, 0f);
         mainKnife.setOnHitCallback(this::handleLifeSteal);
         level.addFreshEntity(mainKnife);
 
         float rand = level.random.nextFloat();
 
-        if (rand < 0.2f) { // 20%概率5飞刀
-            // 15度偏移的2把
+        if (rand < 0.2f) {
             GhostKnife rightKnife1 = createKnife(level, player, baseDamage * 0.8f, ANGLE_OFFSET_15);
             rightKnife1.setOnHitCallback(this::handleLifeSteal);
             level.addFreshEntity(rightKnife1);
@@ -115,72 +108,53 @@ public class VampireKnives extends ModifiableItem {
             level.addFreshEntity(leftKnife);
         }
 
-        // 播放音效
         level.playSound(null, player.getX(), player.getY(), player.getZ(),
                 SoundEvents.TRIDENT_THROW, player.getSoundSource(), 1.0F, 1.5F);
 
-        // 消耗耐久
         ToolDamageUtil.damageAnimated(tool, 1, player);
         player.awardStat(Stats.ITEM_USED.get(this));
 
-        // 设置冷却
         player.getCooldowns().addCooldown(this, (int)cooldown);
 
         return InteractionResultHolder.consume(stack);
     }
 
     private GhostKnife createKnife(Level level, Player player, float damage, float horizontalAngleOffset) {
-        // 获取当前手持的 ToolStack 和 InteractionHand
         InteractionHand hand = player.getUsedItemHand();
         ItemStack stack = player.getItemInHand(hand);
-        ToolStack tool = ToolStack.from(stack); // 从物品栏获取 ToolStack
+        ToolStack tool = ToolStack.from(stack);
 
-        // 创建 GhostKnife 并传递 ToolStack 和 InteractionHand
         GhostKnife knife = new GhostKnife(level, 0.6f, tool, hand);
         knife.baseDamage = damage;
         knife.setOwner(player);
 
-        // 设置方向和位置
         Vec3 lookAngle = player.getLookAngle();
-        Vec3 rotationAxis = new Vec3(0, 1, 0);
-        Vec3 rotatedDirection = rotateVectorAroundAxis(lookAngle, rotationAxis, horizontalAngleOffset);
-        knife.shoot(rotatedDirection.x, rotatedDirection.y, rotatedDirection.z, 1.5F, 1.0F);
-        knife.setPos(player.getX(), player.getEyeY() - 0.1, player.getZ());
+        double radians = Math.toRadians(horizontalAngleOffset);
+        double cos = Math.cos(radians);
+        double sin = Math.sin(radians);
 
+        Vec3 direction = new Vec3(
+                lookAngle.x * cos + lookAngle.z * sin,
+                lookAngle.y,
+                lookAngle.z * cos - lookAngle.x * sin
+        ).normalize();
+
+        knife.shoot(direction.x, direction.y, direction.z, 1.5F, 1.0F);
+        knife.setPos(player.getX(), player.getEyeY() - 0.1, player.getZ());
         knife.offHand = (hand == InteractionHand.OFF_HAND);
         return knife;
     }
 
-    // 水平旋转专用方法（优化版）
-    private Vec3 rotateVectorAroundAxis(Vec3 vector, Vec3 axis, float degrees) {
-        double radians = Math.toRadians(degrees);
-        double cos = Math.cos(radians);
-        double sin = Math.sin(radians);
-
-        // 简化的水平旋转计算（绕Y轴）
-        return new Vec3(
-                vector.x * cos + vector.z * sin,
-                vector.y,  // 保持垂直方向不变
-                vector.z * cos - vector.x * sin
-        ).normalize();
-    }
-
-    // 吸血回调处理
     private void handleLifeSteal(LivingEntity attacker, LivingEntity target, float damageDealt) {
-        // 检查attacker和target不为null
         if (attacker == null || target == null || attacker.level() == null) {
             return;
         }
-
-        // 检查吸血概率
         if (attacker.level().random.nextFloat() < LIFE_STEAL_CHANCE) {
             float healAmount = damageDealt * LIFE_STEAL_PERCENT;
-            // 确保治疗量至少为1点
             if (healAmount < 1.0f) healAmount = 1.0f;
 
             attacker.heal(healAmount);
 
-            // 只在服务端生成粒子效果
             if (!attacker.level().isClientSide()) {
                 ServerLevel serverLevel = (ServerLevel)attacker.level();
                 serverLevel.sendParticles(ParticleTypes.HEART,
@@ -200,7 +174,7 @@ public class VampireKnives extends ModifiableItem {
             builder.add(ToolStats.ATTACK_DAMAGE);
             builder.add(ToolStats.ATTACK_SPEED);
         }
-        TooltipUtils.addToolStatTooltip(builder, tool, STToolStats.COOLDOWN);
+        TooltipUtil.addToolStatTooltip(builder, tool, STToolStats.COOLDOWN);
         builder.addAllFreeSlots();
 
         for(ModifierEntry entry : tool.getModifierList()) {

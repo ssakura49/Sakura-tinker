@@ -25,8 +25,9 @@ import slimeknights.tconstruct.library.tools.stat.ModifierStatsBuilder;
 
 import java.util.List;
 
-import static slimeknights.tconstruct.library.tools.capability.ToolEnergyCapability.*;
+import static com.ssakura49.sakuratinker.content.tools.capability.ForgeEnergyCapability.*;
 
+@Deprecated(forRemoval = true, since = "1.2.8")
 public abstract class ForgeEnergyModifier extends BaseModifier implements ModifierRemovalHook, TooltipModifierHook, ToolStatsModifierHook, CustomBarDisplayModifierHook, ValidateModifierHook {
     @Override
     public int getPriority() {

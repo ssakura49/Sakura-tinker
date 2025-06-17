@@ -1,10 +1,8 @@
 package com.ssakura49.sakuratinker.data;
 
-import com.ssakura49.sakuratinker.SakuraTinker;
-import com.ssakura49.sakuratinker.data.providiers.STBlockStateProvider;
-import com.ssakura49.sakuratinker.data.providiers.STFluidTagProvider;
-import com.ssakura49.sakuratinker.data.providiers.STItemModelProvider;
-import com.ssakura49.sakuratinker.data.providiers.tcon.STFluidEffectProvider;
+import com.ssakura49.sakuratinker.data.providiers.*;
+import com.ssakura49.sakuratinker.data.providiers.curios.STCuriosProvider;
+import com.ssakura49.sakuratinker.data.providiers.tinker.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -12,23 +10,49 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.fluids.data.FluidBucketModelProvider;
+import slimeknights.tconstruct.library.client.data.material.MaterialPartTextureGenerator;
+import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
+import slimeknights.tconstruct.tools.data.sprite.TinkerPartSpriteProvider;
 
 import java.util.concurrent.CompletableFuture;
 
-@Mod.EventBusSubscriber(modid = SakuraTinker.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class STDataGenerator {
+import static com.ssakura49.sakuratinker.SakuraTinker.MODID;
+
+@Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+public final class STDataGenerator {
     @SubscribeEvent
-    public static void gatherData(GatherDataEvent event) {
+    public static void gatherData(@NotNull GatherDataEvent event) {
+        boolean server = event.includeServer();
+        boolean client = event.includeClient();
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         ExistingFileHelper helper = event.getExistingFileHelper();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(event.includeClient(), new STBlockStateProvider(output, helper));
-        generator.addProvider(event.includeClient(), new STFluidTagProvider(output, lookupProvider, helper));
-        generator.addProvider(event.includeClient(), new STItemModelProvider(output, helper));
-        generator.addProvider(event.includeClient(), new STFluidEffectProvider(output));
-        generator.addProvider(event.includeClient(), new FluidBucketModelProvider(output, SakuraTinker.MODID));
+        generator.addProvider(client, new STFluidTextureProvider(output));
+        generator.addProvider(client, new STBlockStateProvider(output, helper));
+//        generator.addProvider(client, new STFluidTagProvider(output, lookupProvider, helper));
+        generator.addProvider(client, new STItemModelProvider(output, helper));
+//        generator.addProvider(client, new STFluidEffectProvider(output));
+        generator.addProvider(server, new STMaterialRecipeProvider(output));
+        generator.addProvider(client, new STMaterialProvider(output));
+        generator.addProvider(client, new STMaterialStatProvider(output));
+        generator.addProvider(client, new STMaterialModifierProvider(output));
+        generator.addProvider(server, new STMaterialTagProvider(output,helper));
+        generator.addProvider(server, new STModifierProvider(output));
+        generator.addProvider(event.includeClient(),new STMaterialRenderInfoProvider(output,new STMaterialSpriteProvider(),helper));
+        generator.addProvider(client, new MaterialPartTextureGenerator(output,helper,new STPartSpriteProvider(),new TinkerMaterialSpriteProvider(),new STMaterialSpriteProvider()));
+        generator.addProvider(client, new MaterialPartTextureGenerator(output,helper,new TinkerPartSpriteProvider(),new STMaterialSpriteProvider()));
+        generator.addProvider(client, new FluidBucketModelProvider(output, MODID));
+        STBlockTagProvider blockTags = new STBlockTagProvider(output, lookupProvider, helper);
+        generator.addProvider(client,blockTags);
+        generator.addProvider(server, new STItemTagProvider(output, lookupProvider, blockTags.contentsGetter(), helper));
+
+        generator.addProvider(server, new STCuriosProvider(MODID, output,helper,lookupProvider));
     }
+
+    public STDataGenerator(){}
 }
+

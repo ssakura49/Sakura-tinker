@@ -1,0 +1,46 @@
+{
+  "translation_key": "item.sakuratinker.power_bank",
+  "icon": {
+    "item": "sakuratinker:power_bank",
+    "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+  },
+  "sortIndex": 10,
+  "input_slots": [
+    {
+      "icon": "sakuratinker:shell",
+      "translation_key": "item.sakuratinker.shell",
+      "x": 45,
+      "y": 40,
+      "filter": {
+        "item": "sakuratinker:shell"
+      }
+    },
+    {
+      "icon": "sakuratinker:energy_unit",
+      "translation_key": "item.sakuratinker.energy_unit",
+      "x": 25,
+      "y": 60,
+      "filter": {
+        "item": "sakuratinker:energy_unit"
+      }
+    },
+    {
+      "icon": "sakuratinker:energy_unit",
+      "translation_key": "item.sakuratinker.energy_unit",
+      "x": 25,
+      "y": 40,
+      "filter": {
+        "item": "sakuratinker:energy_unit"
+      }
+    },
+    {
+      "icon": "sakuratinker:energy_unit",
+      "translation_key": "item.sakuratinker.energy_unit",
+      "x": 25,
+      "y": 20,
+      "filter": {
+        "item": "sakuratinker:energy_unit"
+      }
+    }
+  ]
+}

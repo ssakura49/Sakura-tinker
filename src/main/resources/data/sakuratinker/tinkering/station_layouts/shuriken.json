@@ -1,0 +1,46 @@
+{
+    "translation_key": "item.sakuratinker.shuriken",
+    "icon": {
+      "item": "sakuratinker:shuriken",
+      "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+    },
+    "sortIndex": 10,
+    "input_slots": [
+        {
+            "icon": "sakuratinker:blade",
+            "translation_key": "item.sakuratinker.blade",
+            "x": 45,
+            "y": 30,
+            "filter": {
+              "item": "sakuratinker:blade"
+            }
+          },
+          {
+            "icon": "sakuratinker:blade",
+            "translation_key": "item.sakuratinker.blade",
+            "x": 25,
+            "y": 50,
+            "filter": {
+              "item": "sakuratinker:blade"
+            }
+          },
+          {
+            "icon": "sakuratinker:blade",
+            "translation_key": "item.sakuratinker.blade",
+            "x": 25,
+            "y": 30,
+            "filter": {
+              "item": "sakuratinker:blade"
+            }
+          },
+          {
+            "icon": "sakuratinker:blade",
+            "translation_key": "item.sakuratinker.blade",
+            "x": 45,
+            "y": 50,
+            "filter": {
+              "item": "sakuratinker:blade"
+            }
+          }
+    ]
+  }

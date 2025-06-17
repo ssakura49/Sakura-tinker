@@ -1,12 +1,23 @@
 {
   "replace": false,
   "values": [
-    "#sakuratinker:casts/multi_use/charm_chain",
-    "#sakuratinker:casts/multi_use/charm_core",
-    "#sakuratinker:casts/multi_use/swift_blade",
-    "#sakuratinker:casts/multi_use/swift_guard",
-    "#sakuratinker:casts/multi_use/barrel",
-    "#sakuratinker:casts/multi_use/battery_cell",
-    "#sakuratinker:casts/multi_use/laser_medium"
+    "#tconstruct:casts/multi_use/charm_chain",
+    "#tconstruct:casts/multi_use/charm_core",
+    "#tconstruct:casts/multi_use/swift_blade",
+    "#tconstruct:casts/multi_use/swift_guard",
+    "#tconstruct:casts/multi_use/barrel",
+    "#tconstruct:casts/multi_use/energy_unit",
+    "#tconstruct:casts/multi_use/laser_medium",
+    "#tconstruct:casts/multi_use/blade",
+    "#tconstruct:casts/multi_use/arrow_head",
+    "#tconstruct:casts/multi_use/arrow_shaft",
+    "#tconstruct:casts/multi_use/book_cover",
+    "#tconstruct:casts/multi_use/spell_cloth",
+    "#tconstruct:casts/multi_use/great_blade",
+    "#tconstruct:casts/multi_use/shell",
+    "#tconstruct:casts/multi_use/flag",
+    "#tconstruct:casts/multi_use/fox_mask_main",
+    "#tconstruct:casts/multi_use/fox_mask_core",
+    "#tconstruct:casts/multi_use/phantom_core"
   ]
 }

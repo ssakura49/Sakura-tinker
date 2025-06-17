@@ -1,0 +1,27 @@
+{
+  "stats": {
+    "sakuratinker:phantom_core": {
+      "phantom_amount": 1.0,
+      "range": 16.0
+    },
+    "tconstruct:binding": {},
+    "tconstruct:handle": {
+      "durability": 0.3,
+      "melee_damage": 0.15,
+      "melee_speed": 0.15,
+      "mining_speed": -0.1
+    },
+    "tconstruct:head": {
+      "durability": 634,
+      "melee_attack": 5.0,
+      "mining_speed": 5.0,
+      "mining_tier": "minecraft:diamond"
+    },
+    "tconstruct:limb": {
+      "accuracy": 0.1,
+      "draw_speed": -0.2,
+      "durability": 400,
+      "velocity": 0.2
+    }
+  }
+}

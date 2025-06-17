@@ -1,0 +1,21 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "main": "sakuratinker:item/tool/part/fox_mask_main/fox_mask_main",
+    "core": "sakuratinker:item/tool/part/fox_mask_core/fox_mask_core"
+  },
+  "modifier_roots": [
+    "sakuratinker:item/tool/fox_mask/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "main",
+      "index": 1
+    },
+    {
+      "name": "core",
+      "index": 0
+    }
+  ]
+}

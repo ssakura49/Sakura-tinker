@@ -1,0 +1,21 @@
+{
+  "level_display": "tconstruct:default",
+  "modules": [
+    {
+      "type": "sakuratinker:environmental_adaptation",
+      "amount": 0.5,
+      "biome_boosts": {
+        "minecraft:desert": {
+          "multiplier": -1.5
+        },
+        "minecraft:plains": {
+          "multiplier": 2.0
+        }
+      },
+      "multiplier": true,
+      "operation": "addition",
+      "stat": "tconstruct:attack_damage"
+    }
+  ],
+  "tooltip_display": "always"
+}

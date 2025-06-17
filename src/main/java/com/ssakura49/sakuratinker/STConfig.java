@@ -3,6 +3,7 @@ package com.ssakura49.sakuratinker;
 import com.ssakura49.sakuratinker.register.STItems;
 import com.ssakura49.sakuratinker.utils.ModListUtil;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -13,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.commons.lang3.tuple.Pair;
 import slimeknights.tconstruct.shared.TinkerMaterials;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(modid = SakuraTinker.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -56,26 +58,31 @@ public class STConfig {
         public final ForgeConfigSpec.DoubleValue Reapers_Blessing_BONUS_PER_HEALTH;
         public final ForgeConfigSpec.DoubleValue VOID_PEARL_DROP_CHANCE;
         public final ForgeConfigSpec.ConfigValue<String> VOID_PEARL_DROP_MOBS;
-
-        public final ForgeConfigSpec.ConfigValue<String> eezoIngotItem;
-        public final ForgeConfigSpec.ConfigValue<String> nihiliteIngotItem;
+        public final ForgeConfigSpec.ConfigValue<String> slimeCrystalEarth;
+        public final ForgeConfigSpec.ConfigValue<String> slimeCrystalSky;
+        public final ForgeConfigSpec.ConfigValue<String> slimeCrystalNether;
         public final ForgeConfigSpec.ConfigValue<String> goldBlockItem;
-        public final ForgeConfigSpec.ConfigValue<String> manyullynIngotItem;
+        public final ForgeConfigSpec.BooleanValue CHARMS_ALLOW_MULTIPLE;
+        public final ForgeConfigSpec.DoubleValue RUINATION_DAMAGE_FACTOR;
+        public final ForgeConfigSpec.DoubleValue LIFE_RATIO_PERCENT;
+        public final ForgeConfigSpec.IntValue tickInterval;
+        public final ForgeConfigSpec.DoubleValue absorptionPerTick;
+        public final ForgeConfigSpec.DoubleValue ShitakusoBonus;
 
         public Common(ForgeConfigSpec.Builder builder) {
             builder.comment("魂樱刻印配方修改").push("recipe");
-            eezoIngotItem = builder
-                    .comment("输入1 (default: sakuratinker:eezo_ingot)")
-                    .define("Input1", "sakuratinker:eezo_ingot");
-            nihiliteIngotItem = builder
-                    .comment("输入2 (default: sakuratinker:nihilite_ingot)")
-                    .define("Input2", "sakuratinker:nihilite_ingot");
+            slimeCrystalEarth = builder
+                    .comment("大地史莱姆水晶 (default: sakuratinker:slime_crystal_earth)")
+                    .define("slimeCrystalEarth", "sakuratinker:slime_crystal_earth");
+            slimeCrystalSky = builder
+                    .comment("天空史莱姆水晶 (default: sakuratinker:slime_crystal_sky)")
+                    .define("slimeCrystalSky", "sakuratinker:slime_crystal_sky");
+            slimeCrystalNether = builder
+                    .comment("下界史莱姆水晶 (default: sakuratinker:slime_crystal_nether")
+                    .define("slimeCrystalNether", "sakuratinker:slime_crystal_nether");
             goldBlockItem = builder
-                    .comment("输入3 (default: minecraft:gold_block)")
-                    .define("Input3", "minecraft:gold_block");
-            manyullynIngotItem = builder
-                    .comment("输入4 (default: tconstruct:manyullyn_ingot)")
-                    .define("Input4", "tconstruct:manyullyn_ingot");
+                    .comment("金块 (default: minecraft:gold_block)")
+                    .define("goldBlock", "minecraft:gold_block");
             builder.pop();
 
             builder.comment("折磨效果").push("torture");
@@ -117,19 +124,48 @@ public class STConfig {
                     .defineInRange("bonusPerHealth", 0.01, 0.0, 0.1);
             builder.pop();
 
-            if (ModListUtil.EnigmaticLegacyLoaded) {
-                builder.comment("虚空珍珠掉落配置").push("void_pearl_drop");
-                VOID_PEARL_DROP_CHANCE = builder
-                        .comment("掉落概率 (0.0 - 1.0)")
-                        .defineInRange("drop_chance", 0.01, 0.0, 1.0);
-                VOID_PEARL_DROP_MOBS = builder
-                        .comment("可以掉落虚空珍珠的生物 (用逗号分隔)，例如: 'minecraft:wither,minecraft:ender_dragon'")
-                        .define("drop_mobs", "minecraft:ender_dragon");
-                builder.pop();
-            } else {
-                VOID_PEARL_DROP_CHANCE = builder.defineInRange("void_pearl_drop.drop_chance", 0.0, 0.0, 1.0);
-                VOID_PEARL_DROP_MOBS = builder.define("void_pearl_drop.drop_mobs", "");
-            }
+            builder.comment("虚空珍珠掉落配置").push("void_pearl_drop");
+            this.VOID_PEARL_DROP_CHANCE = builder
+                    .comment("掉落概率 (0.0 - 1.0)")
+                    .defineInRange("drop_chance", 0.01, 0.0, 1.0);
+            this.VOID_PEARL_DROP_MOBS = builder
+                    .comment("可以掉落虚空珍珠的生物 (用逗号分隔)，例如: 'minecraft:wither,minecraft:ender_dragon'")
+                    .define("drop_mobs", "minecraft:ender_dragon");
+            builder.pop();
+
+            builder.comment("护符配置").push("charms");
+            this.CHARMS_ALLOW_MULTIPLE = builder
+                    .comment("设为true允许装备多件护符")
+                    .define("allowMultipleCharms", false);
+            builder.pop();
+
+            builder.comment("罪孽根源配置").push("Ruination Modifier Config");
+            this.RUINATION_DAMAGE_FACTOR = builder
+                    .comment("罪孽根源的伤害系数")
+                    .defineInRange("ruinationDamage", 0.03, 0.0, 1.0);
+            builder.pop();
+
+            builder.comment("生命之尺").push("Life Ratio Modifier Config");
+            this.LIFE_RATIO_PERCENT = builder
+                    .comment("生命之尺的增幅系数")
+                    .defineInRange("lifeRatio", 0.1, 0.0, 1.0);
+            builder.pop();
+
+            builder.push("伤害吸收配置");
+            tickInterval = builder
+                    .comment("每tick恢复的额外生命 (default: 5)")
+                    .defineInRange("tickInterval", 5, 1, 1000);
+            absorptionPerTick = builder
+                    .comment("恢复生命的间隔 (default: 0.2)")
+                    .defineInRange("absorptionPerTick", 0.2, 0.0, 100.0);
+            builder.pop();
+
+            builder.push("下克上");
+            ShitakusoBonus = builder
+                    .comment("Multiplier for damage scaling based on health ratio (default: 0.1)")
+                    .defineInRange("k", 0.1, 0.0, 10.0);
+
+            builder.pop();
         }
     }
 
@@ -158,19 +194,26 @@ public class STConfig {
         };
     }
 
-    public static Supplier<Item> getEezoIngot() {
-        return getConfiguredItem(COMMON.eezoIngotItem, STItems.eezo_ingot);
+    public static Supplier<Item> slime_crystal_earth() {
+        return getConfiguredItem(COMMON.slimeCrystalEarth,
+                () -> ForgeRegistries.ITEMS.getValue(new ResourceLocation(SakuraTinker.MODID, "slime_crystal_earth")));
     }
 
-    public static Supplier<Item> getNihiliteIngot() {
-        return getConfiguredItem(COMMON.nihiliteIngotItem, STItems.nihilite_ingot);
+    public static Supplier<Item> slime_crystal_sky() {
+        return getConfiguredItem(COMMON.slimeCrystalSky,
+                () -> ForgeRegistries.ITEMS.getValue(new ResourceLocation(SakuraTinker.MODID, "slime_crystal_sky")));
+    }
+
+    public static Supplier<Item> slime_crystal_nether() {
+        return getConfiguredItem(COMMON.slimeCrystalNether,
+                () -> ForgeRegistries.ITEMS.getValue(new ResourceLocation(SakuraTinker.MODID, "slime_crystal_nether")));
     }
 
     public static Supplier<Item> getGoldBlock() {
         return getConfiguredItem(COMMON.goldBlockItem, () -> Items.GOLD_BLOCK);
     }
 
-    public static Supplier<Item> getManyullynIngot() {
-        return getConfiguredItem(COMMON.manyullynIngotItem, TinkerMaterials.manyullyn::getIngot);
+    public static boolean allowMultipleCharms() {
+        return COMMON.CHARMS_ALLOW_MULTIPLE.get();
     }
 }

@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id" : "sakuratinker:spell_cloth_sand_cast", "required":false},
+    {"id" : "sakuratinker:spell_cloth_red_sand_cast", "required":false}
+  ]
+}

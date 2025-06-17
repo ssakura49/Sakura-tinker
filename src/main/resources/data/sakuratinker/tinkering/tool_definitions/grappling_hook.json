@@ -1,0 +1,69 @@
+{
+  "modules": [
+    {
+      "type": "tconstruct:part_stats",
+      "parts": [
+        {
+          "item": "tconstruct:small_blade",
+          "scale": 1
+        },
+        {
+          "item": "tconstruct:bow_limb",
+          "scale": 1
+        },
+        {
+          "item": "tconstruct:bow_limb",
+          "scale": 1
+        },
+        {
+          "item": "tconstruct:bowstring",
+          "scale": 1
+        },
+        {
+          "item": "tconstruct:tough_handle",
+          "scale": 1
+        }
+      ],
+      "primary_part": 0
+    },
+    {
+      "type": "tconstruct:default_materials",
+      "materials": [
+        {
+          "type": "tconstruct:random",
+          "tier": 1
+        },
+        {
+          "type": "tconstruct:random",
+          "tier": 1
+        },
+        {
+          "type": "tconstruct:random",
+          "tier": 1
+        }
+      ]
+    },
+    {
+      "type": "tconstruct:base_stats",
+      "stats": {
+        "tconstruct:attack_damage": 2.0,
+        "tconstruct:attack_speed": 1.0
+      }
+    },
+    {
+      "type": "tconstruct:multiply_stats",
+      "multipliers": {
+        "tconstruct:attack_damage": 1.4,
+        "tconstruct:durability": 1.0
+      }
+    },
+
+    {
+      "type": "tconstruct:modifier_slots",
+      "slots": {
+        "abilities": 1,
+        "upgrades": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "condition": {
+    "type": "forge:or",
+    "values": [
+      {
+        "type": "tconstruct:config",
+        "prop": "force_integration_materials"
+      },
+      {
+        "type": "forge:mod_loaded",
+        "modid": "twilightforest"
+      }
+    ]
+  },
+  "craftable": false,
+  "hidden": false,
+  "sortOrder": 8,
+  "tier": 4
+}

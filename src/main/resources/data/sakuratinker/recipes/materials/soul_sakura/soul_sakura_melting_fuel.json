@@ -5,6 +5,6 @@
         "amount": 50,
         "fluid": "sakuratinker:molten_soul_sakura"
     },
-    "rate": 10,
+    "rate": 20.0,
     "temperature": 2000
 }

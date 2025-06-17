@@ -1,0 +1,55 @@
+{
+  "translation_key": "item.sakuratinker.grappling_hook",
+  "icon": {
+    "item": "sakuratinker:grappling_hook",
+    "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+  },
+  "sortIndex": 4,
+  "input_slots": [
+    {
+      "icon": "tconstruct:small_blade",
+      "translation_key": "item.tconstruct.small_blade",
+      "x": 18,
+      "y": 19,
+      "filter": {
+        "item": "tconstruct:small_blade"
+      }
+    },
+    {
+      "icon": "tconstruct:bow_limb",
+      "translation_key": "item.tconstruct.bow_limb",
+      "x": 58,
+      "y": 19,
+      "filter": {
+        "item": "tconstruct:bow_limb"
+      }
+    },
+    {
+      "icon": "tconstruct:bow_limb",
+      "translation_key": "item.tconstruct.bow_limb",
+      "x": 18,
+      "y": 54,
+      "filter": {
+        "item": "tconstruct:bow_limb"
+      }
+    },
+    {
+      "icon": "tconstruct:bowstring",
+      "translation_key": "item.tconstruct.bowstring",
+      "x": 38,
+      "y": 36,
+      "filter": {
+        "item": "tconstruct:bowstring"
+      }
+    },
+    {
+      "icon": "tconstruct:tough_handle",
+      "translation_key": "item.tconstruct.tough_handle",
+      "x": 58,
+      "y": 54,
+      "filter": {
+        "item": "tconstruct:tough_handle"
+      }
+    }
+  ]
+}

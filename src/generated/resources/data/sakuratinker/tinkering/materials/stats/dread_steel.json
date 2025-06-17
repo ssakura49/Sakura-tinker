@@ -1,0 +1,47 @@
+{
+  "stats": {
+    "tconstruct:binding": {},
+    "tconstruct:handle": {
+      "durability": 0.5,
+      "melee_damage": 0.5,
+      "melee_speed": 0.5,
+      "mining_speed": 0.5
+    },
+    "tconstruct:head": {
+      "durability": 1880,
+      "melee_attack": 9.0,
+      "mining_speed": 6.0,
+      "mining_tier": "sakuratinker:dread_steel"
+    },
+    "tconstruct:maille": {},
+    "tconstruct:plating_boots": {
+      "armor": 4.0,
+      "durability": 1040,
+      "knockback_resistance": 0.25,
+      "toughness": 5.0
+    },
+    "tconstruct:plating_chestplate": {
+      "armor": 9.0,
+      "durability": 1280,
+      "knockback_resistance": 0.25,
+      "toughness": 5.0
+    },
+    "tconstruct:plating_helmet": {
+      "armor": 6.0,
+      "durability": 880,
+      "knockback_resistance": 0.25,
+      "toughness": 5.0
+    },
+    "tconstruct:plating_leggings": {
+      "armor": 5.0,
+      "durability": 1200,
+      "knockback_resistance": 0.25,
+      "toughness": 5.0
+    },
+    "tconstruct:plating_shield": {
+      "durability": 1440,
+      "knockback_resistance": 0.25,
+      "toughness": 5.0
+    }
+  }
+}

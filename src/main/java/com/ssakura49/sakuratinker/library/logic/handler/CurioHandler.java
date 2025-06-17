@@ -7,9 +7,9 @@ import com.ssakura49.sakuratinker.library.hooks.curio.CurioArrowHook;
 import com.ssakura49.sakuratinker.library.hooks.curio.CurioBehaviorHook;
 import com.ssakura49.sakuratinker.library.hooks.curio.CurioCombatHook;
 import com.ssakura49.sakuratinker.library.logic.context.ImpactData;
-import com.ssakura49.sakuratinker.library.tools.STHooks;
-import com.ssakura49.sakuratinker.library.tools.STToolStats;
-import com.ssakura49.sakuratinker.utils.ToolUtils;
+import com.ssakura49.sakuratinker.library.tinkering.tools.STHooks;
+import com.ssakura49.sakuratinker.library.tinkering.tools.STToolStats;
+import com.ssakura49.sakuratinker.utils.tinker.ToolUtil;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -34,7 +34,7 @@ public class CurioHandler {
     @SubscribeEvent
     public static void onDamageStack(ItemStackDamageEvent event) {
         LivingEntity entity = event.getEntity();
-        ToolUtils.Curios.getStacks(entity).forEach((stack) -> {
+        ToolUtil.Curios.getStacks(entity).forEach((stack) -> {
             ToolStack curio = ToolStack.from(stack);
             curio.getModifierList().forEach((e) -> {
                 CurioBehaviorHook hook = (CurioBehaviorHook)e.getHook(STHooks.CURIO_BEHAVIOR);
@@ -46,11 +46,11 @@ public class CurioHandler {
     private static void onHurtEntity(LivingHurtEvent event) {
         Entity var2 = event.getSource().getEntity();
         if (var2 instanceof LivingEntity attacker) {
-            ToolUtils.Curios.getStacks(attacker).forEach((stack) -> {
+            ToolUtil.Curios.getStacks(attacker).forEach((stack) -> {
                 ToolStack curio = ToolStack.from(stack);
                 curio.getModifierList().forEach((e) -> {
                     CurioCombatHook hook = (CurioCombatHook)e.getHook(STHooks.CURIO_COMBAT);
-                    hook.onCurioToDamagePre(curio, event, attacker, event.getEntity(), e.getLevel());
+                    hook.onDamageTargetPre(curio, event, attacker, event.getEntity(), e.getLevel());
                 });
             });
         }
@@ -60,7 +60,7 @@ public class CurioHandler {
     public static void onLivingHurt(LivingHurtEvent event) {
         LivingEntity entity = event.getEntity();
         onHurtEntity(event);
-        ToolUtils.Curios.getStacks(entity).forEach((stack) -> {
+        ToolUtil.Curios.getStacks(entity).forEach((stack) -> {
             ToolStack curio = ToolStack.from(stack);
             curio.getModifierList().forEach((e) -> {
                 CurioCombatHook hook = (CurioCombatHook)e.getHook(STHooks.CURIO_COMBAT);
@@ -72,7 +72,7 @@ public class CurioHandler {
     private static void onDamageEntity(LivingDamageEvent event) {
         Entity var2 = event.getSource().getEntity();
         if (var2 instanceof LivingEntity attacker) {
-            ToolUtils.Curios.getStacks(attacker).forEach((stack) -> {
+            ToolUtil.Curios.getStacks(attacker).forEach((stack) -> {
                 ToolStack curio = ToolStack.from(stack);
                 curio.getModifierList().forEach((e) -> {
                     CurioCombatHook hook = (CurioCombatHook)e.getHook(STHooks.CURIO_COMBAT);
@@ -86,7 +86,7 @@ public class CurioHandler {
     public static void onLivingDamage(LivingDamageEvent event) {
         LivingEntity entity = event.getEntity();
         onDamageEntity(event);
-        ToolUtils.Curios.getStacks(entity).forEach((stack) -> {
+        ToolUtil.Curios.getStacks(entity).forEach((stack) -> {
             ToolStack curio = ToolStack.from(stack);
             curio.getModifierList().forEach((e) -> {
                 CurioCombatHook hook = (CurioCombatHook)e.getHook(STHooks.CURIO_COMBAT);
@@ -99,7 +99,7 @@ public class CurioHandler {
     public static void onLivingDeath(LivingDeathEvent event) {
         Entity var2 = event.getSource().getEntity();
         if (var2 instanceof LivingEntity attacker) {
-            ToolUtils.Curios.getStacks(attacker).forEach((stack) -> {
+            ToolUtil.Curios.getStacks(attacker).forEach((stack) -> {
                 ToolStack curio = ToolStack.from(stack);
                 curio.getModifierList().forEach((e) -> {
                     CurioCombatHook hook = (CurioCombatHook)e.getHook(STHooks.CURIO_COMBAT);
@@ -113,7 +113,7 @@ public class CurioHandler {
     public static void onLivingCalculate(LivingCalculateAbsEvent event) {
         LivingEntity attacker = event.getLivingAttacker();
         if (attacker != null) {
-            ToolUtils.Curios.getStacks(attacker).forEach((stack) -> {
+            ToolUtil.Curios.getStacks(attacker).forEach((stack) -> {
                 ToolStack curio = ToolStack.from(stack);
                 curio.getModifierList().forEach((e) -> {
                     CurioCombatHook hook = (CurioCombatHook)e.getHook(STHooks.CURIO_COMBAT);
@@ -126,7 +126,7 @@ public class CurioHandler {
     @SubscribeEvent
     public static void onLivingHeal(LivingHealEvent event) {
         LivingEntity entity = event.getEntity();
-        ToolUtils.Curios.getStacks(entity).forEach((stack) -> {
+        ToolUtil.Curios.getStacks(entity).forEach((stack) -> {
             ToolStack curio = ToolStack.from(stack);
             curio.getModifierList().forEach((e) -> {
                 CurioBehaviorHook hook = (CurioBehaviorHook)e.getHook(STHooks.CURIO_BEHAVIOR);
@@ -146,7 +146,7 @@ public class CurioHandler {
         if (entity instanceof AbstractArrow arrow) {
             Entity var3 = arrow.getOwner();
             if (var3 instanceof LivingEntity livingEntity) {
-                ToolUtils.Curios.getStacks(livingEntity).forEach((stack) -> {
+                ToolUtil.Curios.getStacks(livingEntity).forEach((stack) -> {
                     ToolStack curio = ToolStack.from(stack);
                     curio.getModifierList().forEach((e) -> {
                         arrowStatAdd(curio, livingEntity, arrow);
@@ -164,7 +164,7 @@ public class CurioHandler {
         if (shooter instanceof AbstractArrow arrow) {
             Entity var3 = arrow.getOwner();
             if (var3 instanceof LivingEntity shooter1) {
-                ToolUtils.Curios.getStacks(shooter1).forEach((stack) -> {
+                ToolUtil.Curios.getStacks(shooter1).forEach((stack) -> {
                     ToolStack curio = ToolStack.from(stack);
                     curio.getModifierList().forEach((e) -> {
                         CurioArrowHook hook = (CurioArrowHook)e.getHook(STHooks.CURIO_ARROW);
@@ -177,7 +177,7 @@ public class CurioHandler {
 
     @SubscribeEvent
     public static void onBreakSpeed(PlayerEvent.BreakSpeed event) {
-        ToolUtils.Curios.getStacks(event.getEntity()).forEach((stack) -> {
+        ToolUtil.Curios.getStacks(event.getEntity()).forEach((stack) -> {
             ToolStack curio = ToolStack.from(stack);
             curio.getModifierList().forEach((e) -> {
                 CurioBehaviorHook hook = (CurioBehaviorHook)e.getHook(STHooks.CURIO_BEHAVIOR);

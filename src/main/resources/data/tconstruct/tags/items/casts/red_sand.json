@@ -1,12 +1,20 @@
 {
-  "replace": false,
   "values": [
     "sakuratinker:charm_chain_red_sand_cast",
     "sakuratinker:charm_core_red_sand_cast",
     "sakuratinker:swift_blade_red_sand_cast",
     "sakuratinker:swift_guard_red_sand_cast",
-    "sakuratinker:barrel_red_sand_cast",
-    "sakuratinker:battery_cell_red_sand_cast",
-    "sakuratinker:laser_medium_red_sand_cast"
+    "sakuratinker:energy_unit_red_sand_cast",
+    "sakuratinker:laser_medium_red_sand_cast",
+    "sakuratinker:arrow_head_red_sand_cast",
+    "sakuratinker:arrow_shaft_red_sand_cast",
+    "sakuratinker:great_blade_red_sand_cast",
+    "sakuratinker:shell_red_sand_cast",
+    "sakuratinker:flag_red_sand_cast",
+    "sakuratinker:fox_mask_main_red_sand_cast",
+    "sakuratinker:fox_mask_core_red_sand_cast",
+    { "id": "sakuratinker:energy_unit_red_sand_cast", "required":false},
+    {"id" : "sakuratinker:book_cover_red_sand_cast", "required":false},
+    {"id" : "sakuratinker:spell_cloth_red_sand_cast", "required":false}
   ]
 }

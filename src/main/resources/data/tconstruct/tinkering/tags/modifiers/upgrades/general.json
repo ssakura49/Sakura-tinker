@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "sakuratinker:attack_modifier",
+    "sakuratinker:defence_modifier",
+    "sakuratinker:botany_is_tech"
+  ]
+}

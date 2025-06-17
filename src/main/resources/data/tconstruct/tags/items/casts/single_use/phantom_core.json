@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "sakuratinker:energy_unit_red_sand_cast", "required":false},
+    { "id": "sakuratinker:energy_unit_sand_cast", "required":false}
+  ]
+}

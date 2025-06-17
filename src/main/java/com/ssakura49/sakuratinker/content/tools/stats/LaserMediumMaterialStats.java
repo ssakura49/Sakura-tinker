@@ -3,7 +3,7 @@ package com.ssakura49.sakuratinker.content.tools.stats;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.ssakura49.sakuratinker.SakuraTinker;
-import com.ssakura49.sakuratinker.library.tools.STToolStats;
+import com.ssakura49.sakuratinker.library.tinkering.tools.STToolStats;
 import net.minecraft.network.chat.Component;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.mantle.data.loadable.primitive.FloatLoadable;
@@ -39,8 +39,14 @@ public record LaserMediumMaterialStats(float range, float cooldown) implements I
     }
 
     public void apply(ModifierStatsBuilder builder, float scale) {
-        STToolStats.RANGE.update(builder, this.range);
-        STToolStats.COOLDOWN.update(builder, this.cooldown);
+        STToolStats.RANGE.update(builder, this.range * scale);
+        STToolStats.COOLDOWN.update(builder, this.cooldown * scale);
+    }
+    public float range(){
+        return this.range;
+    }
+    public float cooldown(){
+        return this.cooldown;
     }
 
     static {

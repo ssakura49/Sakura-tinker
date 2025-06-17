@@ -1,5 +1,6 @@
 {
+  "replace": false,
   "values": [
-    "sakuratinker:blurred"
+    { "id": "sakuratinker:blurred", "required":false}
   ]
 }

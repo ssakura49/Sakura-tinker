@@ -1,0 +1,22 @@
+{
+    "loader": "tconstruct:tool",
+    "parent": "forge:item/default-tool",
+    "textures": {
+      "blade": "sakuratinker:item/tool/grappling_hook/blade",
+      "blade_broken": "sakuratinker:item/tool/grappling_hook/blade_broken",
+      "bowstring": "sakuratinker:item/tool/grappling_hook/bowstring",
+      "limb1": "sakuratinker:item/tool/grappling_hook/limb1",
+      "limb2": "sakuratinker:item/tool/grappling_hook/limb2",
+      "handle": "sakuratinker:item/tool/grappling_hook/handle"
+    },
+    "modifier_roots": [
+      "sakuratinker:item/tool/grappling_hook/modifiers/"
+    ],
+    "parts": [
+      { "name": "blade", "index": 3," broken": "blade_broken"},
+      { "name": "limb1", "index": 1},
+      { "name": "limb2", "index": 2},
+      { "name": "handle", "index": 0},
+      { "name": "bowstring", "index": 4}
+    ]
+  }

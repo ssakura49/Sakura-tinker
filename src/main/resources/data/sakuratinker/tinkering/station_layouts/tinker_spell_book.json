@@ -1,0 +1,46 @@
+{
+    "translation_key": "item.sakuratinker.tinker_spell_book",
+    "icon": {
+      "item": "sakuratinker:tinker_spell_book",
+      "nbt": {
+        "tic_display": true,
+        "tic_materials": [
+          "tconstruct:ui_render#head",
+          "tconstruct:ui_render#handle",
+          "tconstruct:ui_render#extra",
+          "tconstruct:ui_render#large",
+          "tconstruct:ui_render#extra_large"
+        ]
+      }
+    },
+    "sortIndex": 20,
+    "input_slots": [
+      {
+        "icon": "sakuratinker:book_cover",
+        "translation_key": "item.sakuratinker.book_cover",
+        "x": 30,
+        "y": 50,
+        "filter": {
+          "item": "sakuratinker:book_cover"
+        }
+      },
+      {
+        "icon": "tconstruct:tool_binding",
+        "translation_key": "item.tconstruct.tool_binding",
+        "x": 30,
+        "y": 30,
+        "filter": {
+          "item": "tconstruct:tool_binding"
+        }
+      },
+      {
+        "icon": "sakuratinker:spell_cloth",
+        "translation_key": "item.sakuratinker.spell_cloth",
+        "x": 50,
+        "y": 30,
+        "filter": {
+          "item": "sakuratinker:spell_cloth"
+        }
+      }
+    ]
+  }

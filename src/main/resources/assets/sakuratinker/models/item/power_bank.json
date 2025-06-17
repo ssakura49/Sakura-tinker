@@ -1,0 +1,19 @@
+{
+    "loader": "tconstruct:tool",
+    "parent": "forge:item/default-tool",
+    "textures": {
+      "shell": "sakuratinker:item/tool/power_bank/shell",
+      "battery_1": "sakuratinker:item/tool/power_bank/battery_1",
+      "battery_2": "sakuratinker:item/tool/power_bank/battery_2",
+      "battery_3": "sakuratinker:item/tool/power_bank/battery_3"
+    },
+    "modifier_roots": [
+      "sakuratinker:item/tool/power_bank/modifiers/"
+    ],
+    "parts": [
+      { "name": "shell", "index": 0},
+      { "name": "battery_1", "index": 1},
+      { "name": "battery_2", "index": 2},
+      { "name": "battery_3", "index": 3}
+    ]
+}

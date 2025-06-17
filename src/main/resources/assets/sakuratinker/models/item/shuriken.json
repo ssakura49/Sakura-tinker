@@ -1,0 +1,19 @@
+{
+    "loader": "tconstruct:tool",
+    "parent": "forge:item/default-tool",
+    "textures": {
+      "blade_1": "sakuratinker:item/tool/shuriken/blade_1",
+      "blade_2": "sakuratinker:item/tool/shuriken/blade_2",
+      "blade_3": "sakuratinker:item/tool/shuriken/blade_3",
+      "blade_4": "sakuratinker:item/tool/shuriken/blade_4"
+    },
+    "modifier_roots": [
+      "sakuratinker:item/tool/shuriken/modifiers/"
+    ],
+    "parts": [
+      { "name": "blade_1", "index": 0," broken": "blade_1"},
+      { "name": "blade_2", "index": 1},
+      { "name": "blade_3", "index": 2},
+      { "name": "blade_4", "index": 3}
+    ]
+  }

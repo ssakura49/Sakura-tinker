@@ -1,0 +1,16 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "sakuratinker:enchanted_blade"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "sakuratinker:magic_shield"
+      }
+    ]
+  }
+}

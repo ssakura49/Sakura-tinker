@@ -1,5 +1,11 @@
 {
   "type": "tconstruct:material_fluid",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "youkaishomecoming"
+    }
+  ],
   "fluid": {
     "name": "sakuratinker:molten_youkai",
     "amount": 90

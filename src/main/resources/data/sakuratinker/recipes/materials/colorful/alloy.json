@@ -1,0 +1,28 @@
+{
+    "type": "tconstruct:alloy",
+    "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "avaritia"
+    }
+  ],
+    "inputs": [
+      {
+        "name": "sakuratinker:molten_crystal_matrix",
+        "amount": 180
+      },
+      {
+        "name": "sakuratinker:molten_neutron",
+        "amount": 270
+      },
+      {
+        "name": "sakuratinker:molten_infinity_catalyst",
+        "amount": 90
+      }
+    ],
+    "result": {
+      "fluid": "sakuratinker:molten_colorful",
+      "amount": 90
+    },
+    "temperature": 4000
+  }

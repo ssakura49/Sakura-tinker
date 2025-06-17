@@ -9,8 +9,8 @@
       {
         "icon": "tconstruct:small_blade",
         "translation_key": "item.tconstruct.small_blade",
-        "x": 30,
-        "y": 30,
+        "x": 28,
+        "y": 32,
         "filter": {
           "item": "tconstruct:small_blade"
         }
@@ -18,8 +18,8 @@
       {
         "icon": "tconstruct:small_blade",
         "translation_key": "item.tconstruct.small_blade",
-        "x": 30,
-        "y": 50,
+        "x": 48,
+        "y": 32,
         "filter": {
           "item": "tconstruct:small_blade"
         }
@@ -27,19 +27,19 @@
       {
         "icon": "tconstruct:small_blade",
         "translation_key": "item.tconstruct.small_blade",
-        "x": 50,
-        "y": 50,
+        "x": 48,
+        "y": 52,
         "filter": {
           "item": "tconstruct:small_blade"
         }
       },
       {
-        "icon": "tconstruct:tool_binding",
-        "translation_key": "item.tconstruct.tool_binding",
-        "x": 50,
-        "y": 30,
+        "icon": "sakuratinker:blade_box",
+        "translation_key": "item.sakuratinker.blade_box",
+        "x": 28,
+        "y": 52,
         "filter": {
-          "item": "tconstruct:tool_binding"
+          "item": "sakuratinker:blade_box"
         }
       }
     ]

@@ -1,17 +1,27 @@
 package com.ssakura49.sakuratinker.register;
 
 import com.ssakura49.sakuratinker.SakuraTinker;
+import com.ssakura49.sakuratinker.compat.Botania.modifier.FirstFractal;
 import com.ssakura49.sakuratinker.content.tinkering.modifiers.armor.*;
 import com.ssakura49.sakuratinker.content.tinkering.modifiers.curio.*;
 import com.ssakura49.sakuratinker.content.tinkering.modifiers.misc.*;
 import com.ssakura49.sakuratinker.content.tinkering.modifiers.melee.*;
-import com.ssakura49.sakuratinker.compat.EnigmaticLegacy.spellstone.GolemHeartModifier;
+import com.ssakura49.sakuratinker.content.tinkering.modifiers.ranged.PrecisionStrikeModifier;
 import com.ssakura49.sakuratinker.content.tinkering.modifiers.special.*;
 import com.ssakura49.sakuratinker.content.tinkering.modifiers.mining.BedrockBreakerModifier;
+import com.ssakura49.sakuratinker.content.tinkering.modifiers.special.battleflag.AttackModifier;
+import com.ssakura49.sakuratinker.content.tinkering.modifiers.special.battleflag.DefenceModifier;
+import com.ssakura49.sakuratinker.content.tinkering.modifiers.test.test;
+import slimeknights.tconstruct.library.modifiers.Modifier;
+import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.modifiers.util.ModifierDeferredRegister;
 import slimeknights.tconstruct.library.modifiers.util.StaticModifier;
 
 public class STModifiers {
+
+    public STModifiers() {
+    }
+
     public static ModifierDeferredRegister MODIFIERS = ModifierDeferredRegister.create(SakuraTinker.MODID);
 
     public static StaticModifier<SolidModifier> Solid;
@@ -59,7 +69,7 @@ public class STModifiers {
     public static StaticModifier<CrystallineArmorModifier> CrystallineArmor;
     public static StaticModifier<ReapersBlessingModifier> ReapersBlessing;
     public static StaticModifier<BedrockBreakerModifier> BedrockBreaker;
-    public static StaticModifier<BatteryCell> BatteryCell;
+    public static StaticModifier<EnergyDisplayModifier> EnergyDisplay;
     public static StaticModifier<ThunderModifier> Thunder;
     public static StaticModifier<FieryFireModifier> FieryFire;
     public static StaticModifier<FrozenModifier> Frozen;
@@ -72,6 +82,41 @@ public class STModifiers {
     public static StaticModifier<ShieldingModifier> Shielding;
     public static StaticModifier<SteadyCurioModifier> SteadyCurio;
     public static StaticModifier<InsatiableCurioModifier> InsatiableCurio;
+    public static StaticModifier<ArrowAmmo> ArrowAmmo;
+    public static StaticModifier<EssenceEarthModifier> EssenceEarth;
+    public static StaticModifier<HeavyWeightModifier> HeavyWeight;
+    public static StaticModifier<MagicBladeModifier> MagicBlade;
+    public static StaticModifier<SpellPowerModifier> SpellPower;
+    public static StaticModifier<SolarBurningModifier> SolarBurning;
+    public static StaticModifier<RejuvenatingModifier> Rejuvenating;
+    public static StaticModifier<SealTooltipModifier> SealTooltip;
+    public static StaticModifier<FeatherModifier> Feather;
+    public static StaticModifier<HydraWillModifier> HydraWill;
+    public static StaticModifier<PrecisionStrikeModifier> PrecisionStrike;
+    public static StaticModifier<EnergySurge> EnergySurge;
+    public static StaticModifier<Modifier> Whetstone;
+    public static StaticModifier<PolishModifier> Polish;
+    public static StaticModifier<PolishingModifier> Polishing;
+    public static StaticModifier<LifeRatioDamageModifier> LifeRatioDamage;
+    public static StaticModifier<AttackModifier> ATTACK_MODIFIER;
+    public static StaticModifier<DefenceModifier> DEFENCE_MODIFIER;
+    public static StaticModifier<StrengthenDecompositionModifier> StrengthenDecomposition;
+    public static StaticModifier<FungalParasitesModifier> FungalParasites;
+    public static StaticModifier<CoagulationModifier> Coagulation;
+    public static StaticModifier<DangerSenseModifier> DangerSense;
+    public static StaticModifier<IncompleteTransformationModifier> IncompleteTransformation;
+    public static StaticModifier<MucilaginousShellModifier> MucilaginousShell;
+    public static StaticModifier<FusionBurnModifier> FusionBurn;
+    public static StaticModifier<GodOfSlimeModifier> GodOfSlime;
+    public static StaticModifier<MindModifier> Mind;
+    public static StaticModifier<SoulModifier> Soul;
+    public static StaticModifier<ShitakusoModifier> Shitakuso;
+    public static StaticModifier<ExceptionallyTalentedModifier> ExceptionallyTalented;
+    public static StaticModifier<NoLevelsModifier> Natural_Will;
+    public static StaticModifier<RelentlessModifier> Relentless;
+    public static StaticModifier<DoubleStrikeModifier> DoubleStrike;
+
+    public static final StaticModifier<test> test = MODIFIERS.register("test",test::new);
 
     static {
         Solid = MODIFIERS.register("solid", SolidModifier::new);
@@ -101,7 +146,7 @@ public class STModifiers {
         PainResonance = MODIFIERS.register("pain_resonance", PainResonanceModifier::new);
         NeutronCondense = MODIFIERS.register("neutron_condense", NeutronCondenseModifier::new);
         Absorption = MODIFIERS.register("absorption", AbsorptionModifier::new);
-        JinxDoll =MODIFIERS.register("jinx_doll", JinxDollModifier::new);
+        JinxDoll = MODIFIERS.register("jinx_doll", JinxDollModifier::new);
         Colorization = MODIFIERS.register("colorization", ColorizationModifier::new);
         Heavy = MODIFIERS.register("heavy", HeavyModifier::new);
         SwiftSwordTechnique = MODIFIERS.register("swift_sword_technique", SwiftSwordTechniqueModifier::new);
@@ -114,12 +159,12 @@ public class STModifiers {
         WorldBottom = MODIFIERS.register("world_bottom", WorldBottomModifier::new);
         HighFrequencyBarrier = MODIFIERS.register("high_frequency_barrier", HighFrequencyBarrierModifier::new);
         BladeConvergence = MODIFIERS.register("blade_convergence", BladeConvergenceModifier::new);
-        Torturing =MODIFIERS.register("torturing", TorturingModifier::new);
+        Torturing = MODIFIERS.register("torturing", TorturingModifier::new);
         Crystalline = MODIFIERS.register("crystalline", CrystallineModifier::new);
         CrystallineArmor = MODIFIERS.register("crystalline_armor", CrystallineArmorModifier::new);
         ReapersBlessing = MODIFIERS.register("reapers_blessing", ReapersBlessingModifier::new);
         BedrockBreaker = MODIFIERS.register("bedrock_breaker", BedrockBreakerModifier::new);
-        BatteryCell = MODIFIERS.register("battery_cell", BatteryCell::new);
+        EnergyDisplay = MODIFIERS.register("energy_display", EnergyDisplayModifier::new);
         Thunder = MODIFIERS.register("thunder", ThunderModifier::new);
         FieryFire = MODIFIERS.register("fiery_fire", FieryFireModifier::new);
         Frozen = MODIFIERS.register("frozen", FrozenModifier::new);
@@ -132,8 +177,40 @@ public class STModifiers {
         Shielding = MODIFIERS.register("shielding", ShieldingModifier::new);
         SteadyCurio = MODIFIERS.register("steady_curio", SteadyCurioModifier::new);
         InsatiableCurio = MODIFIERS.register("insatiable_curio", InsatiableCurioModifier::new);
-    }
+        ArrowAmmo = MODIFIERS.register("arrow_ammo", ArrowAmmo::new);
+        EssenceEarth = MODIFIERS.register("essence_earth", EssenceEarthModifier::new);
+        HeavyWeight = MODIFIERS.register("heavy_weight", HeavyWeightModifier::new);
+        MagicBlade = MODIFIERS.register("magic_blade", MagicBladeModifier::new);
+        SpellPower = MODIFIERS.register("spell_power", SpellPowerModifier::new);
+        SolarBurning = MODIFIERS.register("solar_burning", SolarBurningModifier::new);
+        Rejuvenating = MODIFIERS.register("rejuvenating", RejuvenatingModifier::new);
+        SealTooltip = MODIFIERS.register("seal_tooltip", SealTooltipModifier::new);
+        Feather = MODIFIERS.register("feather", FeatherModifier::new);
+        HydraWill = MODIFIERS.register("hydra_will", HydraWillModifier::new);
+        PrecisionStrike = MODIFIERS.register("precision_strike", PrecisionStrikeModifier::new);
+        EnergySurge = MODIFIERS.register("energy_surge", EnergySurge::new);
+        Whetstone = MODIFIERS.register("whetstone", Modifier::new);
+        Polish = MODIFIERS.register("polish", PolishModifier::new);
+        Polishing = MODIFIERS.register("polishing", PolishingModifier::new);
+        LifeRatioDamage = MODIFIERS.register("life_ratio", LifeRatioDamageModifier::new);
+        ATTACK_MODIFIER = MODIFIERS.register("attack_modifier", AttackModifier::new);
+        DEFENCE_MODIFIER = MODIFIERS.register("defence_modifier", DefenceModifier::new);
+        StrengthenDecomposition = MODIFIERS.register("strengthen_decomposition", StrengthenDecompositionModifier::new);
+        FungalParasites = MODIFIERS.register("fungal_parasites", FungalParasitesModifier::new);
+        Coagulation = MODIFIERS.register("coagulation", CoagulationModifier::new);
+        DangerSense = MODIFIERS.register("danger_sense", DangerSenseModifier::new);
+        IncompleteTransformation = MODIFIERS.register("incomplete_transformation", IncompleteTransformationModifier::new);
+        MucilaginousShell = MODIFIERS.register("mucilaginous_shell", MucilaginousShellModifier::new);
+        FusionBurn = MODIFIERS.register("fusion_burn", FusionBurnModifier::new);
+        GodOfSlime = MODIFIERS.register("god_of_slime", GodOfSlimeModifier::new);
 
-    public STModifiers() {
+        Mind = MODIFIERS.register("mind", MindModifier::new);
+        Soul = MODIFIERS.register("soul", SoulModifier::new);
+        Shitakuso = MODIFIERS.register("shitakuso", ShitakusoModifier::new);
+        ExceptionallyTalented = MODIFIERS.register("exceptionally_talented", ExceptionallyTalentedModifier::new);
+        Natural_Will = MODIFIERS.register("natural_will", NoLevelsModifier::new);
+        Relentless = MODIFIERS.register("relentless", RelentlessModifier::new);
+        DoubleStrike = MODIFIERS.register("double_strike", DoubleStrikeModifier::new);
+
     }
 }

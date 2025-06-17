@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "sakuratinker:item/colorful_ingot",
+    "layer0": "sakuratinker:item/material/colorful_ingot",
       "halo": "sakurashader:misc/halo"
   },
   "loader": "sakurashader:halo",

@@ -1,0 +1,36 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "tconstruct:overslime"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:god_of_slime"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:fusion_burn"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:incomplete_transformation"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "tconstruct:overslime"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:mucilaginous_shell"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:incomplete_transformation"
+      }
+    ]
+  }
+}

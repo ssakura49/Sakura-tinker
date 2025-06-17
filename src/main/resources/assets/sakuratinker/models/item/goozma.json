@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sakuratinker:item/material/goozma",
+      "halo": "sakurashader:misc/halo_g"
+  },
+  "loader": "sakurashader:halo",
+  "halo": {
+  "texture": "#halo",
+  "color": -1,
+  "size": 10,
+  "pulse": true
+}
+}

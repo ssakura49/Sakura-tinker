@@ -1,0 +1,9 @@
+{
+  "entities": [
+    "minecraft:player"
+  ],
+  "slots": [
+    "fox_mask",
+    "tinker_charm"
+  ]
+}

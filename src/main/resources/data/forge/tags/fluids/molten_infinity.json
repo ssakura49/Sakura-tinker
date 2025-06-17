@@ -1,5 +1,6 @@
 {
+  "replace": false,
   "values": [
-    "#sakuratinker:molten_infinity"
+    "sakuratinker:molten_infinity"
   ]
 }

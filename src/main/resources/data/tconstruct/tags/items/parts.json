@@ -6,7 +6,15 @@
     "sakuratinker:swift_blade",
     "sakuratinker:swift_guard",
     "sakuratinker:barrel",
-    "sakuratinker:battery_cell",
-    "sakuratinker:laser_medium"
+    "sakuratinker:energy_unit",
+    "sakuratinker:laser_medium",
+    "sakuratinker:blade",
+    "sakuratinker:arrow_head",
+    "sakuratinker:arrow_shaft",
+    "sakuratinker:fletching",
+    "sakuratinker:book_cover",
+    "sakuratinker:spell_cloth",
+    "sakuratinker:flag",
+    { "id": "sakuratinker:phantom_core", "required":false}
   ]
 }

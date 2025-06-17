@@ -1,0 +1,27 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default",
+  "textures": {
+    "plating": "sakuratinker:item/tool/armor/embedded/helmet/plating_broken",
+    "embedding": "sakuratinker:item/tool/armor/embedded/leggings/embedding",
+    "maille": "sakuratinker:item/tool/armor/embedded/helmet/maille_broken"
+  },
+  "modifier_roots": [
+    "sakuratinker:item/tool/armor/embedded/helmet/modifiers/broken/",
+    "sakuratinker:item/tool/armor/embedded/helmet/modifiers/"
+  ],
+  "parts": [
+    {
+      "name": "plating",
+      "index": 1
+    },
+    {
+      "name": "maille",
+      "index": 2
+    },
+    { 
+      "name": "embedding", 
+      "index": 0
+    }
+  ]
+}

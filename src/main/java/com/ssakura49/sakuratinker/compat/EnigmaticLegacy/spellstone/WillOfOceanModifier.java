@@ -2,6 +2,7 @@ package com.ssakura49.sakuratinker.compat.EnigmaticLegacy.spellstone;
 
 import com.ssakura49.sakuratinker.generic.BaseModifier;
 import com.ssakura49.sakuratinker.library.logic.context.AttackData;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -13,6 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
 import java.util.UUID;
@@ -54,8 +56,8 @@ public class WillOfOceanModifier extends BaseModifier {
     }
 
     @Override
-    public float onModifyTakeDamage(IToolStackView armor, AttackData data, int level, float amount) {
-        if (data.entity().isInWaterRainOrBubble()) {
+    public float onModifyTakeDamage(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
+        if (context.getEntity().isInWaterRainOrBubble()) {
             return amount * 0.6f;
         }
         return amount;

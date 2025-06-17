@@ -1,0 +1,36 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "tconstruct:overslime"
+    },
+    {
+      "level": 2,
+      "name": "tconstruct:overworked"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:precision_strike"
+    },
+    {
+      "level": 2,
+      "name": "etstlib:photosynthesis_guide"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "tconstruct:overslime"
+      },
+      {
+        "level": 2,
+        "name": "tconstruct:overworked"
+      },
+      {
+        "level": 1,
+        "name": "sakuratinker:danger_sense"
+      }
+    ]
+  }
+}

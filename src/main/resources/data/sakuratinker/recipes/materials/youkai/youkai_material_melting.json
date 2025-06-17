@@ -1,5 +1,11 @@
 {
   "type": "tconstruct:material_melting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "youkaishomecoming"
+    }
+  ],
   "input": "sakuratinker:youkai",
   "temperature": 800,
   "result": {

@@ -1,6 +1,6 @@
 package com.ssakura49.sakuratinker.library.hooks.click;
 
-import com.ssakura49.sakuratinker.library.tools.STHooks;
+import com.ssakura49.sakuratinker.library.tinkering.tools.STHooks;
 import com.ssakura49.sakuratinker.network.handler.PacketHandler;
 import com.ssakura49.sakuratinker.network.packet.PlayerLeftClickEmpty;
 import net.minecraft.core.BlockPos;

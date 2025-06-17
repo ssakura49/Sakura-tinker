@@ -1,0 +1,16 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "sakuratinker:body"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:mind"
+    },
+    {
+      "level": 1,
+      "name": "sakuratinker:soul"
+    }
+  ]
+}

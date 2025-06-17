@@ -1,0 +1,16 @@
+{
+  "default": [
+    {
+      "level": 2,
+      "name": "sakuratinker:devour_soul"
+    }
+  ],
+  "perStat": {
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "sakuratinker:soul_seeker"
+      }
+    ]
+  }
+}

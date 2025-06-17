@@ -9,19 +9,19 @@
       {
         "icon": "sakuratinker:barrel",
         "translation_key": "item.sakuratinker.barrel",
-        "x": 10,
-        "y": 20,
+        "x": 14,
+        "y": 24,
         "filter": {
           "item": "sakuratinker:barrel"
         }
       },
       {
-        "icon": "sakuratinker:battery_cell",
-        "translation_key": "item.sakuratinker.battery_cell",
+        "icon": "sakuratinker:energy_unit",
+        "translation_key": "item.sakuratinker.energy_unit",
         "x": 53,
         "y": 55,
         "filter": {
-          "item": "sakuratinker:battery_cell"
+          "item": "sakuratinker:energy_unit"
         }
       },
       {

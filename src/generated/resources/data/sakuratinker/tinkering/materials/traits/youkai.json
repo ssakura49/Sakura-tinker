@@ -1,0 +1,22 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "sakuratinker:nether_ghost"
+    }
+  ],
+  "perStat": {
+    "sakuratinker:charm": [
+      {
+        "level": 1,
+        "name": "sakuratinker:jinx_doll"
+      }
+    ],
+    "tconstruct:armor": [
+      {
+        "level": 1,
+        "name": "sakuratinker:youkaified"
+      }
+    ]
+  }
+}

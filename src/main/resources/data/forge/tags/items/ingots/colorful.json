@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "sakuratinker:colorful_ingot", "required":false}
+  ]
+}

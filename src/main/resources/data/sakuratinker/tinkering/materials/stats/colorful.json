@@ -52,6 +52,12 @@
       "toughness": 0.5,
       "damage": 1.0,
       "arrow_damage": 1.0
+    },
+    "sakuratinker:flag": {
+      "range": 80,
+      "attack_buff_time": 1000,
+      "defence_buff_time": 320,
+      "charge_time": 20
     }
   }
 }

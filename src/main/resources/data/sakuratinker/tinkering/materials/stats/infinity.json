@@ -53,13 +53,19 @@
       "damage": 5.0,
       "arrow_damage": 5.0
     },
-    "sakuratinker:battery_cell": {
-      "energy_capacity": 90000000,
+    "sakuratinker:energy_unit": {
+      "energy_storage": 90000000,
       "durability": 5.0
     },
     "sakuratinker:laser_medium": {
       "range": 128,
       "cooldown": 0.1
+    },
+    "sakuratinker:flag": {
+      "range": 100,
+      "attack_buff_time": 3200,
+      "defence_buff_time": 3200,
+      "charge_time": 10
     }
   }
 }

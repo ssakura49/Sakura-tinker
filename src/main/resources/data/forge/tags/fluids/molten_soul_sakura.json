@@ -1,5 +1,6 @@
 {
+  "replace": false,
   "values": [
-    "#sakuratinker:molten_soul_sakura"
+    "sakuratinker:molten_soul_sakura"
   ]
 }

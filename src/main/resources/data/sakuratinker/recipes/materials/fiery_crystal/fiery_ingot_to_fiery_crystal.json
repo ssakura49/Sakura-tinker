@@ -6,6 +6,12 @@
       "modid": "twilightforest"
     }
   ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "twilightforest"
+    }
+  ],
   "key": {
     "A": {
       "item": "twilightforest:fiery_ingot"

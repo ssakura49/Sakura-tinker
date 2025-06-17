@@ -7,7 +7,7 @@
             "item": "sakuratinker:barrel",
             "scale": 0.75
           },
-          "sakuratinker:battery_cell",
+          "sakuratinker:energy_unit",
           "sakuratinker:laser_medium",
           "tconstruct:tough_handle"
         ]
@@ -58,7 +58,7 @@
         "type": "tconstruct:traits",
         "traits": [
           {
-            "name": "sakuratinker:battery_cell",
+            "name": "sakuratinker:energy_display",
             "level": 1
           }
         ]

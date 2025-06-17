@@ -33,12 +33,11 @@ public class BlazingCoreModifier extends BaseModifier {
     }
 
     @Override
-    public float onModifyTakeDamage(IToolStackView armor, AttackData data, int level, float amount) {
-        DamageSource source = data.source();
-        LivingEntity entity = data.entity();
+    public float onModifyTakeDamage(IToolStackView tool, ModifierEntry modifier, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
         if (source.is(DamageTypes.IN_FIRE)) {
             return 0;
         }
+        LivingEntity entity = context.getEntity();
         if (source.is(DamageTypes.LAVA)) {
             if (entity instanceof Player player) {
                 int overheat = player.getPersistentData().getInt(OVERHEAT_TAG);
