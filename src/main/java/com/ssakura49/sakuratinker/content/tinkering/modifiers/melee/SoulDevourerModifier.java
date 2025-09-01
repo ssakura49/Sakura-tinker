@@ -16,28 +16,33 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
 import java.util.List;
 
-public class SoulDevourerModifier extends BaseModifier {
-    private static final ResourceLocation DAMAGE_BONUS_KEY = new ResourceLocation(SakuraTinker.MODID, "soul_devourer_damage_bonus");
+public class SoulDevourerModifier extends CurioModifier {
+    private static final ResourceLocation DAMAGE_BONUS_KEY = ResourceLocation.fromNamespaceAndPath(SakuraTinker.MODID, "soul_devourer_damage_bonus");
     private static final float BONUS_PER_KILL = 0.0001f;
 
     @Override
-    public void onKillLivingTarget(IToolStackView tool, LivingDeathEvent event, LivingEntity attacker, LivingEntity target, int level) {
+    public int getPriority() {
+        return 10;
+    }
+
+    @Override
+    public void onKillLivingTarget(IToolStackView tool, ModifierEntry entry, LivingDeathEvent event, LivingEntity attacker, LivingEntity target) {
         if (event.getSource().getEntity() == attacker) {
             float currentBonus = tool.getPersistentData().getFloat(DAMAGE_BONUS_KEY);
-            tool.getPersistentData().putFloat(DAMAGE_BONUS_KEY, currentBonus + BONUS_PER_KILL * level);
+            tool.getPersistentData().putFloat(DAMAGE_BONUS_KEY, currentBonus + BONUS_PER_KILL * entry.getLevel());
         }
     }
 
     @Override
-    public void onAfterMeleeHit(IToolStackView tool, int level, ToolAttackContext context, LivingEntity attacker, LivingEntity target, float damageDealt) {
-        if (target.isDeadOrDying()) {
-            float currentBonus = tool.getPersistentData().getFloat(DAMAGE_BONUS_KEY);
-            tool.getPersistentData().putFloat(DAMAGE_BONUS_KEY, currentBonus + BONUS_PER_KILL * level);
+    public void onCurioToKillTarget(IToolStackView curio, ModifierEntry entry, LivingDeathEvent event, LivingEntity attacker, LivingEntity target) {
+        if (event.getSource().getEntity() == attacker) {
+            float currentBonus = curio.getPersistentData().getFloat(DAMAGE_BONUS_KEY);
+            curio.getPersistentData().putFloat(DAMAGE_BONUS_KEY, currentBonus + BONUS_PER_KILL * entry.getLevel());
         }
     }
 
     @Override
-    public float onModifyMeleeDamage(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, LivingEntity attacker, LivingEntity target, float baseDamage, float actualDamage) {
+    public float getMeleeDamage(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float baseDamage, float actualDamage) {
         float bonus = tool.getPersistentData().getFloat(DAMAGE_BONUS_KEY);
         return actualDamage * (1.0f + bonus);
     }
@@ -50,6 +55,16 @@ public class SoulDevourerModifier extends BaseModifier {
     @Override
     public void addTooltip(IToolStackView tool, ModifierEntry modifierEntry, @Nullable Player player, List<Component> tooltip, TooltipKey tooltipKey, TooltipFlag tooltipFlag) {
         float bonus = tool.getPersistentData().getFloat(DAMAGE_BONUS_KEY) * 100;
-        tooltip.add(Component.translatable("modifier.sakuratinker.soul_devourer.tooltip").append(": ").append(String.format("%.2f", bonus)));
+        int level = modifierEntry.getLevel();
+        String text = I18n.get("modifier.sakuratinker.soul_devourer.tooltip") + ": " + String.format("%.2f", bonus) + "("+ level + ")";
+
+        tooltip.add(DynamicComponentUtil.WaveColorText.getColorfulText(
+                text,
+                null,
+                CommonRGBUtil.darkBlue.getRGB(),
+                40,
+                1000,
+                true
+        ));
     }
 }
