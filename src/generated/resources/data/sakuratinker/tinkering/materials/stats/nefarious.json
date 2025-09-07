@@ -1,0 +1,75 @@
+{
+  "stats": {
+    "sakuratinker:energy_unit": {
+      "durability": 1.2,
+      "energy_storage": 300000
+    },
+    "sakuratinker:laser_medium": {
+      "cooldown": 0.3,
+      "penetration": 24,
+      "range": 50.0
+    },
+    "sakuratinker:phantom_core": {
+      "phantom_amount": 4.0,
+      "range": 50.0
+    },
+    "sakuratinker:soul_gatherer.json": {
+      "soul_increase": 0.6,
+      "soul_power": 15.0
+    },
+    "tconstruct:binding": {},
+    "tconstruct:grip": {
+      "accuracy": 0.4,
+      "durability": 0.5,
+      "melee_damage": 6.0
+    },
+    "tconstruct:handle": {
+      "durability": 0.5,
+      "melee_damage": 0.45,
+      "melee_speed": 0.35,
+      "mining_speed": 0.6
+    },
+    "tconstruct:head": {
+      "durability": 1800,
+      "melee_attack": 7.0,
+      "mining_speed": 8.0,
+      "mining_tier": "minecraft:netherite"
+    },
+    "tconstruct:limb": {
+      "accuracy": 0.6,
+      "draw_speed": 0.7,
+      "durability": 1400,
+      "velocity": 0.6
+    },
+    "tconstruct:maille": {},
+    "tconstruct:plating_boots": {
+      "armor": 4.0,
+      "durability": 2340,
+      "knockback_resistance": 2.5,
+      "toughness": 4.5
+    },
+    "tconstruct:plating_chestplate": {
+      "armor": 10.0,
+      "durability": 2880,
+      "knockback_resistance": 2.5,
+      "toughness": 4.5
+    },
+    "tconstruct:plating_helmet": {
+      "armor": 6.0,
+      "durability": 1980,
+      "knockback_resistance": 2.5,
+      "toughness": 4.5
+    },
+    "tconstruct:plating_leggings": {
+      "armor": 7.0,
+      "durability": 2700,
+      "knockback_resistance": 2.5,
+      "toughness": 4.5
+    },
+    "tconstruct:plating_shield": {
+      "durability": 3240,
+      "knockback_resistance": 2.5,
+      "toughness": 4.5
+    }
+  }
+}

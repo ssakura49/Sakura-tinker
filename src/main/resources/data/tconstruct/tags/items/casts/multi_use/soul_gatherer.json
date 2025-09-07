@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    {"id" : "sakuratinker:soul_gatherer_cast", "required":false}
+  ]
+}

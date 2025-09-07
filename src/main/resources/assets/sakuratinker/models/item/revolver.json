@@ -1,0 +1,17 @@
+{
+    "loader": "tconstruct:tool",
+    "parent": "forge:item/default-tool",
+    "textures": {
+      "grip": "sakuratinker:item/tool/revolver/grip",
+      "handle": "sakuratinker:item/tool/revolver/handle",
+      "limb": "sakuratinker:item/tool/revolver/limb"
+    },
+    "modifier_roots": [
+      "sakuratinker:item/tool/revolver/modifiers/"
+    ],
+    "parts": [
+      { "name": "grip", "index": 0},
+      { "name": "handle", "index": 1},
+      { "name": "limb", "index": 2}
+    ]
+}

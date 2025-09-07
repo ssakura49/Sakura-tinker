@@ -1,0 +1,19 @@
+{
+  "required": false,
+  "package": "com.ssakura49.sakuratinker.mixin.Eeeabsmobs",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "sakuratinker.refmap.json",
+  "plugin": "com.ssakura49.sakuratinker.library.mixinplugin.EeeabsmobsMixinPlugin",
+  "mixins": [
+    "EntityImmortalAccessor",
+    "EntityNamelessGuardianAccessor"
+  ],
+  "client": [
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.7"
+}

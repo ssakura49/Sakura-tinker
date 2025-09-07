@@ -1,0 +1,19 @@
+{
+  "loader" : "tconstruct:tool",
+  "parent" : "forge:item/default-tool",
+  "textures" : {
+    "body_1" : "sakuratinker:item/tool/yoyo/body_1",
+    "body_2" : "sakuratinker:item/tool/yoyo/body_2",
+    "axle" : "sakuratinker:item/tool/yoyo/axle",
+    "chord" : "sakuratinker:item/tool/yoyo/chord",
+    "ring" : "sakuratinker:item/tool/yoyo/ring"
+  },
+  "modifier_roots" : [ "sakuratinker:item/tool/yoyo/modifiers/" ],
+  "parts": [
+    { "name": "body_1",  "index": 0},
+    { "name": "body_2",  "index": 1 },
+    { "name": "axle",  "index": 2 },
+    { "name": "chord",  "index": 3 },
+    { "name": "ring",  "index": 4 }
+  ]
+}

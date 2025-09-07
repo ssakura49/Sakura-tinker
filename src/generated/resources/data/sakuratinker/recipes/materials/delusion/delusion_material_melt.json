@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "sakuratinker:delusion",
+  "result": {
+    "amount": 90,
+    "fluid": "sakuratinker:molten_delusion"
+  },
+  "temperature": 4000
+}

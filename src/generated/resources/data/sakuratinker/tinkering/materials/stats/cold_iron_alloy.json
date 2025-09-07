@@ -1,0 +1,22 @@
+{
+  "stats": {
+    "sakuratinker:axle": {
+      "attack_interval": 20.0,
+      "time": 600.0,
+      "weight": 3.8
+    },
+    "tconstruct:binding": {},
+    "tconstruct:handle": {
+      "durability": -0.2,
+      "melee_damage": -0.2,
+      "melee_speed": 0.2,
+      "mining_speed": 0.1
+    },
+    "tconstruct:limb": {
+      "accuracy": 0.1,
+      "draw_speed": 0.3,
+      "durability": 480,
+      "velocity": 0.1
+    }
+  }
+}

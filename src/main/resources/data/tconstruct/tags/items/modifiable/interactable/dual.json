@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "sakuratinker:laser_gun",
+    "sakuratinker:tinker_arrow",
+    "sakuratinker:grappling_hook",
+    "sakuratinker:battle_flag",
+    "sakuratinker:vampire_knife",
+    "sakuratinker:blade_convergence",
+    { "id": "sakuratinker:first_fractal", "required":false},
+    "sakuratinker:yoyo",
+    { "id": "sakuratinker:tinker_wand", "required":false},
+    "sakuratinker:revolver"
+  ]
+}

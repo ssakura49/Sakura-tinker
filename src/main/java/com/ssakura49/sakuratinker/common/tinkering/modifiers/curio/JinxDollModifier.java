@@ -1,0 +1,90 @@
+package com.ssakura49.sakuratinker.common.tinkering.modifiers.curio;
+
+import com.ssakura49.sakuratinker.STConfig;
+import com.ssakura49.sakuratinker.generic.CurioModifier;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import top.theillusivec4.curios.api.SlotContext;
+
+import java.util.*;
+
+public class JinxDollModifier extends CurioModifier {
+    private static final int DEBUFF_REMOVAL_DELAY = 100;
+    private static final int GLOBAL_COOLDOWN = 200;
+
+    private static final Map<MobEffect, Integer> debuffTimers = new HashMap<>();
+    private static int lastClearTick = 0;
+
+    private static final List<MobEffect> POSITIVE_EFFECTS = Arrays.asList(
+            MobEffects.MOVEMENT_SPEED,
+            MobEffects.DIG_SPEED,
+            MobEffects.DAMAGE_BOOST,
+            MobEffects.HEAL,
+            MobEffects.JUMP,
+            MobEffects.REGENERATION,
+            MobEffects.DAMAGE_RESISTANCE,
+            MobEffects.FIRE_RESISTANCE,
+            MobEffects.WATER_BREATHING,
+            MobEffects.INVISIBILITY
+    );
+
+    @Override
+    public boolean isNoLevels() {
+        return true;
+    }
+
+    @Override
+    public void onCurioTick(IToolStackView curio, ModifierEntry entry, SlotContext context, LivingEntity entity, ItemStack stack) {
+        if (!(entity instanceof Player player)) {
+            return;
+        }
+        if (player.tickCount - lastClearTick < GLOBAL_COOLDOWN) {
+            return;
+        }
+
+        boolean cleared = false;
+        List<MobEffectInstance> effectsToProcess = new ArrayList<>(player.getActiveEffects());
+        for (MobEffectInstance effect : effectsToProcess) {
+            if (effect != null) {
+                MobEffect mobEffect = effect.getEffect();
+                if (!mobEffect.isBeneficial()) {
+                    RegistryAccess access = entity.level().registryAccess();
+                    if (STConfig.isBlacklisted(mobEffect,access)) {
+                        continue;
+                    }
+
+                    if (!debuffTimers.containsKey(mobEffect)) {
+                        debuffTimers.put(mobEffect, player.tickCount);
+                    }
+                    if (player.tickCount - debuffTimers.get(mobEffect) >= DEBUFF_REMOVAL_DELAY) {
+                        player.removeEffect(mobEffect);
+                        debuffTimers.remove(mobEffect);
+                        cleared = true;
+                    }
+                }
+            }
+        }
+        if (cleared) {
+            lastClearTick = player.tickCount;
+            MobEffect randomPositiveEffect = getRandomPositiveEffect();
+            if (randomPositiveEffect != null) {
+                player.addEffect(new MobEffectInstance(randomPositiveEffect, 40, 0));
+            }
+        }
+    }
+
+    private MobEffect getRandomPositiveEffect() {
+        if (POSITIVE_EFFECTS.isEmpty()) {
+            return null;
+        }
+        Random random = new Random();
+        return POSITIVE_EFFECTS.get(random.nextInt(POSITIVE_EFFECTS.size()));
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "stats": {
+    "sakuratinker:spell_cloth": {
+      "base_spell_damage": 25.0,
+      "cast_time": -3.0,
+      "spell_power": -0.1,
+      "spell_reduce": -0.1
+    }
+  }
+}

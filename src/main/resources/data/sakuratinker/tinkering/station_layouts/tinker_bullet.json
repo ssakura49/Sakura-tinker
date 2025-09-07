@@ -1,0 +1,28 @@
+{
+  "icon": {
+    "item": "sakuratinker:tinker_bullet",
+    "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+  },
+  "input_slots": [
+    {
+      "filter": {
+        "item": "tconstruct:small_blade"
+      },
+      "icon": "tconstruct:small_blade",
+      "translation_key": "item.tconstruct.small_blade",
+      "x": 20,
+      "y": 30
+    },
+    {
+      "filter": {
+        "item": "tconstruct:small_blade"
+      },
+      "icon": "tconstruct:small_blade",
+      "translation_key": "item.tconstruct.small_blade",
+      "x": 40,
+      "y": 30
+    }
+  ],
+  "sortIndex": 3,
+  "translation_key": "item.sakuratinker.tinker_bullet"
+}

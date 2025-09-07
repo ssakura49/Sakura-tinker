@@ -1,0 +1,48 @@
+{
+  "stats": {
+    "sakuratinker:axle": {
+      "attack_interval": 8.0,
+      "time": 200.0,
+      "weight": 2.8
+    },
+    "sakuratinker:chord": {
+      "length": 10.0
+    },
+    "sakuratinker:energy_unit": {
+      "durability": 1.0,
+      "energy_storage": 150000
+    },
+    "sakuratinker:laser_medium": {
+      "cooldown": 0.25,
+      "penetration": 18,
+      "range": 40.0
+    },
+    "sakuratinker:yoyo_ring": {
+      "max_collected": 3.0
+    },
+    "tconstruct:binding": {},
+    "tconstruct:grip": {
+      "accuracy": 0.6,
+      "durability": 0.2,
+      "melee_damage": 6.0
+    },
+    "tconstruct:handle": {
+      "durability": 0.2,
+      "melee_damage": 0.45,
+      "melee_speed": 0.6,
+      "mining_speed": 0.6
+    },
+    "tconstruct:head": {
+      "durability": 1362,
+      "melee_attack": 6.0,
+      "mining_speed": 7.0,
+      "mining_tier": "minecraft:netherite"
+    },
+    "tconstruct:limb": {
+      "accuracy": 0.3,
+      "draw_speed": 0.5,
+      "durability": 800,
+      "velocity": 0.5
+    }
+  }
+}

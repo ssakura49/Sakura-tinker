@@ -1,0 +1,13 @@
+{
+    "loader" : "tconstruct:tool",
+    "parent" : "forge:item/default-tool",
+    "textures" : {
+      "bullet_1" : "sakuratinker:item/tool/tinker_bullet/bullet_1",
+      "bullet_2" : "sakuratinker:item/tool/tinker_bullet/bullet_2"
+    },
+    "modifier_roots" : [ "sakuratinker:item/tool/tinker_bullet/modifiers/" ],
+    "parts": [
+      { "name": "bullet_1",  "index": 0},
+      { "name": "bullet_2",  "index": 1 }
+    ]
+  }

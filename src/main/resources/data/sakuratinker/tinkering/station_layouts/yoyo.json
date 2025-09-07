@@ -1,0 +1,55 @@
+{
+  "translation_key": "item.sakuratinker.yoyo",
+  "icon": {
+    "item": "sakuratinker:yoyo",
+    "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+  },
+  "sortIndex": 4,
+  "input_slots": [
+    {
+      "icon": "sakuratinker:yoyo_body",
+      "translation_key": "item.sakuratinker.yoyo_body",
+      "x": 20,
+      "y": 20,
+      "filter": {
+        "item": "sakuratinker:yoyo_body"
+      }
+    },
+    {
+      "icon": "sakuratinker:yoyo_body",
+      "translation_key": "item.sakuratinker.yoyo_body",
+      "x": 20,
+      "y": 60,
+      "filter": {
+        "item": "sakuratinker:yoyo_body"
+      }
+    },
+    {
+      "icon": "sakuratinker:axle",
+      "translation_key": "item.sakuratinker.axle",
+      "x": 20,
+      "y": 40,
+      "filter": {
+        "item": "sakuratinker:axle"
+      }
+    },
+    {
+      "icon": "sakuratinker:chord",
+      "translation_key": "item.sakuratinker.chord",
+      "x": 40,
+      "y": 40,
+      "filter": {
+        "item": "sakuratinker:chord"
+      }
+    },
+    {
+      "icon": "sakuratinker:yoyo_ring",
+      "translation_key": "item.sakuratinker.yoyo_ring",
+      "x": 60,
+      "y": 40,
+      "filter": {
+        "item": "sakuratinker:yoyo_ring"
+      }
+    }
+  ]
+}

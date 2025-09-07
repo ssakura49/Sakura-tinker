@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id" : "sakuratinker:soul_gatherer_sand_cast", "required":false},
+    {"id" : "sakuratinker:soul_gatherer_red_sand_cast", "required":false}
+  ]
+}

@@ -1,0 +1,41 @@
+{
+    "loader": "tconstruct:tool",
+    "parent": "forge:item/default-tool",
+    "textures": {
+      "scythe_blade": "sakuratinker:item/tool/scythe/scythe_blade",
+      "scythe_blade_broken": "sakuratinker:item/tool/scythe/scythe_blade_broken",
+      "plate": "sakuratinker:item/tool/scythe/plate",
+      "tough_binding": "sakuratinker:item/tool/scythe/tough_binding",
+      "tough_handle": "sakuratinker:item/tool/scythe/tough_handle",
+
+      "large_scythe_blade": "sakuratinker:item/tool/scythe/scythe_blade",
+      "large_scythe_blade_broken": "sakuratinker:item/tool/scythe/scythe_blade_broken",
+      "large_plate": "sakuratinker:item/tool/scythe/plate",
+      "large_tough_binding": "sakuratinker:item/tool/scythe/tough_binding",
+      "large_tough_handle": "sakuratinker:item/tool/scythe/tough_handle"
+    },
+    "modifier_roots": {
+      "small": [
+      "sakuratinker:item/tool/scythe/modifiers/"
+      ],
+      "large": [
+      "sakuratinker:item/tool/scythe/large/modifiers/"
+      ]
+    },
+    "large": true,
+    "large_offset": [ -2, 2],
+    "parts": [
+      { "name": "scythe_blade", "index": 0, "broken": "scythe_blade_broken" },
+      { "name": "plate", "index": 1 },
+      { "name": "tough_binding", "index": 2 },
+      { "name": "tough_handle", "index": 3 }
+    ],
+    "overrides": [
+      {
+        "predicate": {
+          "tconstruct:charging": 2
+        },
+        "model": "sakuratinker:item/tool/scythe/scythe_blocking"
+      }
+    ]
+  }

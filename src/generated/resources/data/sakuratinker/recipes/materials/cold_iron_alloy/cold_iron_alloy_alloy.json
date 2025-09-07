@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    {
+      "amount": 180,
+      "fluid": "tconstruct:molten_iron"
+    },
+    {
+      "amount": 180,
+      "fluid": "sakuratinker:molten_orichalcum"
+    },
+    {
+      "amount": 1000,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "result": {
+    "amount": 90,
+    "fluid": "sakuratinker:molten_cold_iron_alloy"
+  },
+  "temperature": 2000
+}

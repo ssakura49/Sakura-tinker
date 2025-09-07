@@ -1,0 +1,6 @@
+{
+  "parent": "forge:item/bucket_drip",
+  "flip_gas": false,
+  "fluid": "sakuratinker:molten_true_perfect_buddysteel",
+  "loader": "tconstruct:fluid_container"
+}
